@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "title": "{product} | AI assistants for the employee journey",
+    "description": "An ecosystem of assistants that supports employees and HR from the first day to career growth, answering from your approved company documents with sources."
+  },
+  "nav": {
+    "how": "Platform",
+    "trust": "Principles",
+    "pricing": "Pricing",
+    "team": "Team",
+    "signIn": "Sign in",
+    "skip": "Skip to content",
+    "language": "Türkçe",
+    "languageLabel": "Türkçe'ye geç",
+    "agents": "Agents",
+    "menu": "Menu",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "cta": {
+    "pilot": "Request a pilot",
+    "mailSubject": "{product} pilot request"
+  },
+  "hero": {
+    "title": "AI assistants for every stage of the employee journey.",
+    "lead": "{product} is an ecosystem of assistants that support employees and HR from the first day to career growth, using your approved company knowledge.",
+    "float1": "Plan approved",
+    "float1Sub": "Sales specialist, 30/60/90",
+    "float2": "Source cited",
+    "float2Sub": "Employee Handbook, 2.4"
+  },
+  "preview": {
+    "label": "Onboarding Agent answer example",
+    "question": "How do I request annual leave?",
+    "answer": "Submit annual leave through the HR Portal at least 3 working days before the planned date. The request then goes to your manager for approval.",
+    "sources": "Sources",
+    "source1": "Employee Handbook, Section 2.4",
+    "source2": "Leave Policy v3",
+    "notFound": "When the approved documents do not cover a question, the assistant does not guess. It forwards the question to HR.",
+    "sample": "Sample interface, not real data."
+  },
+  "problem": {
+    "title": "Employee experience still runs on scattered tools",
+    "items": [
+      "New hires get the same pile of documents, with no clear sense of which ones apply to their role.",
+      "HR answers the same leave, payroll and policy questions with every intake.",
+      "Onboarding, learning and career processes run in separate systems that do not talk to each other.",
+      "Managers often notice what their team needs only after a problem has grown."
+    ]
+  },
+  "trust": {
+    "title": "What it does and what it does not",
+    "doesTitle": "It does",
+    "does": [
+      "Answer from approved documents and cite the source",
+      "Say so when the information is missing and pass the question to HR",
+      "Show plans to employees only after HR approval",
+      "Use synthetic or anonymised data during testing and pilots"
+    ],
+    "doesNotTitle": "It does not",
+    "doesNot": [
+      "Monitor employees or read their messages and email",
+      "Score performance, stress or attrition risk",
+      "Make hiring, promotion, pay or disciplinary decisions",
+      "Perform psychological assessments"
+    ],
+    "compliance": "Designed in line with KVKK and GDPR principles, with the EU AI Act requirements in mind.",
+    "lead": "{product} assistants inform and guide. They do not make decisions, monitor employees or score them."
+  },
+  "partners": {
+    "title": "Pilot partners and targets",
+    "lead": "Three companies validate the same assistant from three angles."
+  },
+  "targets": {
+    "title": "Pilot targets",
+    "note": "These are targets set for the pilot, not measured results.",
+    "badge": "Target",
+    "items": [
+      {
+        "value": "70%",
+        "label": "fewer repeated HR questions"
+      },
+      {
+        "value": "30%",
+        "label": "shorter time to productivity"
+      },
+      {
+        "value": "+15",
+        "label": "eNPS points within 6 months"
+      },
+      {
+        "value": "<10%",
+        "label": "attrition in the first 6 months"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "note": "Indicative prices, not final. Confirmed during the pilot conversation.",
+    "perMonth": "/ month",
+    "plans": {
+      "pilot": {
+        "name": "Pilot",
+        "scope": "3 months, 15-30 employees, 1 department"
+      },
+      "starter": {
+        "name": "Starter",
+        "scope": "Up to 100 employees, Onboarding Agent"
+      },
+      "growth": {
+        "name": "Growth",
+        "scope": "Up to 500 employees, multiple departments"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "scope": "Unlimited employees, on-premise option"
+      }
+    },
+    "free": "Free"
+  },
+  "team": {
+    "title": "Team",
+    "lead": "{company}, in collaboration with AOSB Technopark and Antalya Bilim University."
+  },
+  "contact": {
+    "title": "Join the pilot programme",
+    "body": "One department, 15-30 new or recent hires and your handbook are enough. We set up the assistant and prepare the documents together."
+  },
+  "login": {
+    "title": "Sign-in is by invitation",
+    "body": "{product} is currently open to users invited by companies in the pilot programme. Your HR team creates your account.",
+    "back": "Back to home"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "body": "This site uses no cookies and collects no personal data from visitors. Details you send from your email client for a pilot request are used only to answer that request.",
+    "back": "Back to home"
+  },
+  "footer": {
+    "rights": "{company}. AOSB Technopark, Antalya.",
+    "privacy": "Privacy",
+    "builtBy": "Built by Yusuf B. Negiz"
+  },
+  "app": {
+    "label": "Onboarding Agent app preview",
+    "nav": [
+      "Dashboard",
+      "AI Assistant",
+      "Missions",
+      "Journey"
+    ],
+    "title": "AI Assistant",
+    "subtitle": "Answers come from approved company documents.",
+    "q2": "Has the evening shuttle route changed?",
+    "a2": "I could not find current information on this in the approved documents. I have passed your question to HR, and you will see the answer here.",
+    "escalated": "Sent to HR",
+    "input": "Ask a question",
+    "journey": "Your journey",
+    "week": "Week 2",
+    "progress": "42% complete",
+    "next": "Next missions",
+    "missions": [
+      [
+        "Security training",
+        "Tomorrow"
+      ],
+      [
+        "Meet your manager",
+        "Thursday"
+      ],
+      [
+        "HR policies quiz",
+        "Friday"
+      ]
+    ]
+  },
+  "logos": "Pilot partners and collaborators",
+  "features": {
+    "title": "One platform, shared principles",
+    "lead": "Each assistant focuses on its own job. All of them share the same knowledge base, the same rules and the same HR control.",
+    "grounded": {
+      "title": "Every answer has a source",
+      "body": "The assistants answer only from company documents HR has approved, and they show the source. If the information is missing, they do not guess. They pass the question to HR."
+    },
+    "plan": {
+      "title": "One shared employee journey",
+      "body": "The assistants work on the same journey plan. From the first 90 days to career growth, employees see their next step on one screen."
+    },
+    "hr": {
+      "title": "HR always has the final say",
+      "body": "HR approves documents and templates, reviews the plans assistants prepare and decides which assistant is introduced and when."
+    }
+  },
+  "hrPanel": {
+    "title": "Plans awaiting approval",
+    "rows": [
+      [
+        "Sales specialist",
+        "Awaiting approval"
+      ],
+      [
+        "Production engineer",
+        "Approved"
+      ],
+      [
+        "HR assistant",
+        "Edited"
+      ]
+    ],
+    "approve": "Approve"
+  },
+  "plan": {
+    "d30": "First 30 days",
+    "d30Items": [
+      "Company introduction",
+      "IT setup",
+      "Security training"
+    ],
+    "d60": "Day 60",
+    "d60Items": [
+      "Department processes",
+      "First project"
+    ],
+    "d90": "Day 90",
+    "d90Items": [
+      "Feedback meeting",
+      "Onboarding complete"
+    ]
+  },
+  "photos": {
+    "mentor": "A colleague guides two new hires on a laptop in an office",
+    "factory": "Engineers working together on a tablet in an automotive production facility",
+    "desk": "An employee helps a colleague at their desk in an open office"
+  },
+  "ecosystem": {
+    "eyebrow": "The {project} ecosystem",
+    "title": "Eight assistants, one ecosystem",
+    "lead": "Each assistant has its own job. The Onboarding Agent is being built and validated today, and the others will follow one by one.",
+    "more": "Explore",
+    "all": "All agents"
+  },
+  "agentsPage": {
+    "title": "Agents",
+    "lead": "Each assistant in the {product} ecosystem owns one stage of the employee journey. All of them follow the same principles.",
+    "now": "In development",
+    "later": "Planned",
+    "caps": "What it does",
+    "audience": "Who it is for",
+    "others": "Other agents",
+    "back": "All agents",
+    "laterNote": "This assistant is in planning. Its scope will be set by pilot results and an ethics review.",
+    "nowNote": "TRL 4 validation is under way with our pilot partners."
+  },
+  "agents": [
+    {
+      "name": "Onboarding Agent",
+      "short": "Guidance, cited answers and a task plan for the first 90 days.",
+      "tagline": "Runs a new hire's first 90 days with your company's own knowledge.",
+      "caps": [
+        {
+          "title": "Answers with sources",
+          "body": "Answers from approved documents and shows the source. If the information is missing, it does not guess. It passes the question to HR."
+        },
+        {
+          "title": "A 30/60/90-day plan per role",
+          "body": "Prepares tasks, documents and dates from the role profile. The plan reaches the employee after HR approval."
+        },
+        {
+          "title": "Missions and progress",
+          "body": "Employees see their next task and where they stand on one screen."
+        }
+      ],
+      "audience": [
+        "New hires",
+        "HR specialists who run onboarding",
+        "Managers who see progress where HR allows it"
+      ],
+      "slug": "onboarding",
+      "status": "now"
+    },
+    {
+      "name": "HR Assistant",
+      "short": "Cited answers to routine HR questions.",
+      "tagline": "Answers leave, payroll and policy questions from sources HR has approved.",
+      "caps": [
+        {
+          "title": "Self-service answers",
+          "body": "Employees can ask about leave, benefits and policies at any time of day."
+        },
+        {
+          "title": "Repeated question insights",
+          "body": "HR sees which questions come up again and which documents are missing or unclear."
+        },
+        {
+          "title": "Request routing",
+          "body": "Questions the assistant cannot answer, or sensitive ones, go to the right HR person."
+        }
+      ],
+      "audience": [
+        "All employees",
+        "HR operations teams"
+      ],
+      "slug": "hr-assistant",
+      "status": "later"
+    },
+    {
+      "name": "Learning Assistant",
+      "short": "Role-based learning paths.",
+      "tagline": "Offers step-by-step learning paths for each role that keep the information load manageable.",
+      "caps": [
+        {
+          "title": "Small daily steps",
+          "body": "Information arrives in small, meaningful pieces each day instead of all at once."
+        },
+        {
+          "title": "Role-based content",
+          "body": "Training material is ordered by the employee's role and experience."
+        },
+        {
+          "title": "Optional badges",
+          "body": "Completed tasks become visible through an optional badge and progress system."
+        }
+      ],
+      "audience": [
+        "New employees and people changing roles",
+        "Learning and development teams"
+      ],
+      "slug": "learning",
+      "status": "later"
+    },
+    {
+      "name": "Culture Assistant",
+      "short": "Adaptation support for international employees.",
+      "tagline": "Helps employees from other countries settle into the company, the team and a new country.",
+      "caps": [
+        {
+          "title": "Country guide",
+          "body": "Provides information on work permits, social security and daily life from approved sources."
+        },
+        {
+          "title": "Culture missions",
+          "body": "Introduces the company's unwritten rules through small missions instead of long lists."
+        },
+        {
+          "title": "Buddy matching",
+          "body": "With HR approval, introduces new hires to an experienced colleague."
+        }
+      ],
+      "audience": [
+        "International and relocating employees",
+        "HR leads for multinational teams"
+      ],
+      "slug": "culture",
+      "status": "later"
+    },
+    {
+      "name": "Manager Assistant",
+      "short": "Anonymous, aggregated team summaries.",
+      "tagline": "Gives managers aggregated, anonymous summaries of their team's onboarding and development.",
+      "caps": [
+        {
+          "title": "Weekly team summary",
+          "body": "Completed tasks, open questions and upcoming steps are summarised at team level."
+        },
+        {
+          "title": "1:1 preparation",
+          "body": "Suggests a meeting agenda from goals the employee has chosen to share."
+        },
+        {
+          "title": "Workload visibility",
+          "body": "Task distribution is shown at team level. No individual monitoring."
+        }
+      ],
+      "audience": [
+        "Team managers",
+        "HR business partners"
+      ],
+      "slug": "manager",
+      "status": "later"
+    },
+    {
+      "name": "Wellbeing Assistant",
+      "short": "Voluntary, consent-based support resources.",
+      "tagline": "Brings together the wellbeing resources and support channels employees can reach on their own terms.",
+      "caps": [
+        {
+          "title": "Voluntary check-in",
+          "body": "If they choose, employees answer a short check-in and get pointed to relevant resources."
+        },
+        {
+          "title": "Support channels",
+          "body": "Psychological support, flexible work and leave options are visible in one place."
+        },
+        {
+          "title": "Life transitions",
+          "body": "Offers approved guides for periods such as returning from parental leave."
+        }
+      ],
+      "audience": [
+        "All employees",
+        "HR and occupational health teams"
+      ],
+      "slug": "wellbeing",
+      "status": "later"
+    },
+    {
+      "name": "Crisis Assistant",
+      "short": "Remote work and emergency procedures.",
+      "tagline": "Delivers current procedures to employees during emergencies and shifts to remote work.",
+      "caps": [
+        {
+          "title": "Procedure guide",
+          "body": "Answers emergency and business continuity questions instantly from approved sources."
+        },
+        {
+          "title": "Remote start",
+          "body": "Provides remote first steps for new hires who cannot come to the office."
+        },
+        {
+          "title": "Support routing",
+          "body": "Directs employees to the relevant teams and support channels."
+        }
+      ],
+      "audience": [
+        "All employees",
+        "Business continuity and HR teams"
+      ],
+      "slug": "crisis",
+      "status": "later"
+    },
+    {
+      "name": "Career Assistant",
+      "short": "Preparation for career development conversations.",
+      "tagline": "Helps employees clarify career goals and prepare for development conversations.",
+      "caps": [
+        {
+          "title": "Goal setting",
+          "body": "Employees record their career goals and interests in a structured way."
+        },
+        {
+          "title": "Growth opportunities",
+          "body": "Shows internal training and role opportunities that match their goals."
+        },
+        {
+          "title": "Conversation prep",
+          "body": "Prepares a summary from the employee's own notes before a career conversation."
+        }
+      ],
+      "audience": [
+        "All employees",
+        "Talent and development teams"
+      ],
+      "slug": "career",
+      "status": "later"
+    }
+  ]
+}

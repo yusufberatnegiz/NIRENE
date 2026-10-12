@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "title": "{product} | Çalışan yolculuğu için yapay zekâ asistanları",
+    "description": "İşe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı dokümanlarıyla, kaynak göstererek destek olan asistan ekosistemi."
+  },
+  "nav": {
+    "how": "Platform",
+    "trust": "İlkeler",
+    "pricing": "Fiyatlar",
+    "team": "Ekip",
+    "signIn": "Giriş yap",
+    "skip": "İçeriğe geç",
+    "language": "English",
+    "languageLabel": "Switch to English",
+    "agents": "Asistanlar",
+    "menu": "Menü",
+    "toLight": "Açık temaya geç",
+    "toDark": "Koyu temaya geç"
+  },
+  "cta": {
+    "pilot": "Pilot başvurusu",
+    "mailSubject": "{product} pilot başvurusu"
+  },
+  "hero": {
+    "title": "Çalışan yolculuğunun her aşaması için yapay zekâ asistanları.",
+    "lead": "{product}, işe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı bilgisiyle destek olan bir asistan ekosistemi.",
+    "float1": "Plan onaylandı",
+    "float1Sub": "Satış uzmanı, 30/60/90",
+    "float2": "Kaynak gösterildi",
+    "float2Sub": "Çalışan El Kitabı, 2.4"
+  },
+  "preview": {
+    "label": "Onboarding Agent yanıt örneği",
+    "question": "Yıllık izin talebimi nasıl iletirim?",
+    "answer": "Yıllık izin talebini İK Portalı üzerinden, planlanan izin tarihinden en az 3 iş günü önce iletirsin. Talep yöneticinin onayına gider.",
+    "sources": "Kaynaklar",
+    "source1": "Çalışan El Kitabı, Bölüm 2.4",
+    "source2": "İzin Politikası v3",
+    "notFound": "Onaylı dokümanlarda bulunmayan bir soruda asistan tahmin yürütmez, soruyu İK'ya yönlendirir.",
+    "sample": "Örnek arayüz, gerçek veri değildir."
+  },
+  "problem": {
+    "title": "Çalışan deneyimi hâlâ dağınık araçlarla yönetiliyor",
+    "items": [
+      "İşe başlayanlar aynı doküman yığınıyla karşılaşıyor, hangisinin kendi rolü için geçerli olduğu belirsiz kalıyor.",
+      "İK ekibi izin, bordro ve politika sorularını her dönem yeniden yanıtlıyor.",
+      "Uyum, öğrenme ve kariyer süreçleri ayrı sistemlerde, birbirinden habersiz ilerliyor.",
+      "Yöneticiler ekiplerinin neye ihtiyaç duyduğunu çoğu zaman sorun büyüdükten sonra fark ediyor."
+    ]
+  },
+  "trust": {
+    "title": "Neyi yapar, neyi yapmaz",
+    "doesTitle": "Yapar",
+    "does": [
+      "Onaylı dokümanlardan, kaynak göstererek yanıt verir",
+      "Bilgi yoksa bunu açıkça söyler ve soruyu İK'ya iletir",
+      "Planları İK onayından sonra çalışana sunar",
+      "Test ve pilot süreçlerinde sentetik ya da anonim veriyle çalışır"
+    ],
+    "doesNotTitle": "Yapmaz",
+    "doesNot": [
+      "Çalışanları izlemez, mesaj ya da e-posta okumaz",
+      "Performans, stres veya ayrılma riski puanı hesaplamaz",
+      "İşe alım, terfi, ücret veya disiplin kararı vermez",
+      "Psikolojik değerlendirme yapmaz"
+    ],
+    "compliance": "KVKK ve GDPR ilkeleriyle uyumlu tasarlanır; AB Yapay Zekâ Yasası gerekliliklerini gözetir.",
+    "lead": "{product} asistanları bilgi verir ve yönlendirir. Karar vermez, çalışanları izlemez ve puanlamaz."
+  },
+  "partners": {
+    "title": "Pilot ortakları ve hedefler",
+    "lead": "Üç şirket, aynı asistanı üç farklı açıdan doğruluyor."
+  },
+  "targets": {
+    "title": "Pilot hedeflerimiz",
+    "note": "Bu rakamlar ölçülmüş sonuçlar değil, pilot süreç için belirlenen hedeflerdir.",
+    "badge": "Hedef",
+    "items": [
+      {
+        "value": "%70",
+        "label": "daha az tekrar eden İK sorusu"
+      },
+      {
+        "value": "%30",
+        "label": "daha kısa uyum süresi"
+      },
+      {
+        "value": "+15",
+        "label": "puan eNPS artışı, 6 ayda"
+      },
+      {
+        "value": "<%10",
+        "label": "ilk 6 ayda ayrılma oranı"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "note": "Örnek fiyatlardır, kesinleşmemiştir. Pilot görüşmesinde netleşir.",
+    "perMonth": "/ ay",
+    "plans": {
+      "pilot": {
+        "name": "Pilot",
+        "scope": "3 ay, 15-30 çalışan, 1 departman"
+      },
+      "starter": {
+        "name": "Starter",
+        "scope": "100 çalışana kadar, Onboarding Agent"
+      },
+      "growth": {
+        "name": "Growth",
+        "scope": "500 çalışana kadar, çoklu departman"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "scope": "Sınırsız çalışan, kurum içi kurulum seçeneği"
+      }
+    },
+    "free": "Ücretsiz"
+  },
+  "team": {
+    "title": "Ekip",
+    "lead": "{company}, AOSB Teknopark ve Antalya Bilim Üniversitesi iş birliğiyle."
+  },
+  "contact": {
+    "title": "Pilot programına katılın",
+    "body": "Bir departman, 15-30 yeni ya da yakın zamanda işe başlamış çalışan ve el kitabınız yeterli. Kurulumu ve dokümanların hazırlanmasını birlikte yapıyoruz."
+  },
+  "login": {
+    "title": "Giriş yalnızca davetle",
+    "body": "{product} şu anda pilot programındaki şirketlerin davet ettiği kullanıcılara açık. Hesabınız İK ekibiniz tarafından oluşturulur.",
+    "back": "Ana sayfaya dön"
+  },
+  "privacy": {
+    "title": "Gizlilik",
+    "body": "Bu sayfa çerez kullanmaz ve ziyaretçilerden kişisel veri toplamaz. Pilot başvurusu için e-posta istemcinizden gönderdiğiniz bilgiler yalnızca başvurunuzu yanıtlamak için kullanılır.",
+    "back": "Ana sayfaya dön"
+  },
+  "footer": {
+    "rights": "{company}. AOSB Teknopark, Antalya.",
+    "privacy": "Gizlilik",
+    "builtBy": "Yusuf B. Negiz tarafından geliştirildi"
+  },
+  "app": {
+    "label": "Onboarding Agent uygulama önizlemesi",
+    "nav": [
+      "Panel",
+      "AI Asistan",
+      "Görevler",
+      "Yolculuk"
+    ],
+    "title": "AI Asistan",
+    "subtitle": "Yanıtlar onaylı şirket dokümanlarından gelir.",
+    "q2": "Akşam servisinin güzergahı değişti mi?",
+    "a2": "Onaylı dokümanlarda bu konuda güncel bir bilgi bulamadım. Sorunu İK ekibine ilettim, yanıt gelince burada göreceksin.",
+    "escalated": "İK'ya iletildi",
+    "input": "Bir soru yazın",
+    "journey": "Yolculuğun",
+    "week": "2. hafta",
+    "progress": "%42 tamamlandı",
+    "next": "Sıradaki görevler",
+    "missions": [
+      [
+        "Güvenlik eğitimi",
+        "Yarın"
+      ],
+      [
+        "Yöneticinle tanışma",
+        "Perşembe"
+      ],
+      [
+        "İK politikaları testi",
+        "Cuma"
+      ]
+    ]
+  },
+  "logos": "Pilot ortakları ve iş birlikleri",
+  "features": {
+    "title": "Tek platform, ortak ilkeler",
+    "lead": "Her asistan kendi işine odaklanır. Hepsi aynı bilgi tabanını, aynı kuralları ve aynı İK kontrolünü paylaşır.",
+    "grounded": {
+      "title": "Her yanıtın bir kaynağı var",
+      "body": "Asistanlar yalnızca İK'nın onayladığı şirket dokümanlarından yanıt üretir ve kaynağı gösterir. Bilgi yoksa tahmin etmez, soruyu İK'ya iletir."
+    },
+    "plan": {
+      "title": "Ortak bir çalışan yolculuğu",
+      "body": "Asistanlar aynı yolculuk planı üzerinde çalışır. İlk 90 günden kariyer gelişimine kadar çalışan sıradaki adımını tek ekranda görür."
+    },
+    "hr": {
+      "title": "Son söz her zaman İK'da",
+      "body": "İK dokümanları ve şablonları onaylar, asistanların hazırladığı planları gözden geçirir ve hangi asistanın ne zaman devreye gireceğine karar verir."
+    }
+  },
+  "hrPanel": {
+    "title": "Onay bekleyen planlar",
+    "rows": [
+      [
+        "Satış uzmanı",
+        "Onay bekliyor"
+      ],
+      [
+        "Üretim mühendisi",
+        "Onaylandı"
+      ],
+      [
+        "İK asistanı",
+        "Düzenlendi"
+      ]
+    ],
+    "approve": "Onayla"
+  },
+  "plan": {
+    "d30": "İlk 30 gün",
+    "d30Items": [
+      "Şirket tanıtımı",
+      "IT kurulumu",
+      "Güvenlik eğitimi"
+    ],
+    "d60": "60. gün",
+    "d60Items": [
+      "Departman süreçleri",
+      "İlk proje"
+    ],
+    "d90": "90. gün",
+    "d90Items": [
+      "Geri bildirim görüşmesi",
+      "Onboarding tamamlandı"
+    ]
+  },
+  "photos": {
+    "mentor": "Ofiste bir ekip arkadaşı yeni başlayan iki çalışana dizüstü bilgisayarda yol gösteriyor",
+    "factory": "Otomotiv üretim tesisinde mühendisler bir tablet üzerinde birlikte çalışıyor",
+    "desk": "Açık ofiste bir çalışan masasındaki iş arkadaşına yardım ediyor"
+  },
+  "ecosystem": {
+    "eyebrow": "{project} ekosistemi",
+    "title": "Sekiz asistan, tek ekosistem",
+    "lead": "Her asistanın kendi görevi var. Onboarding Agent bugün geliştiriliyor ve doğrulanıyor, diğerleri sırayla devreye alınacak.",
+    "more": "İncele",
+    "all": "Tüm asistanlar"
+  },
+  "agentsPage": {
+    "title": "Asistanlar",
+    "lead": "{product} ekosistemindeki her asistan çalışan yolculuğunun bir aşamasından sorumlu. Hepsi aynı ilkelere bağlı.",
+    "now": "Geliştiriliyor",
+    "later": "Planlanıyor",
+    "caps": "Ne yapar",
+    "audience": "Kimler için",
+    "others": "Diğer asistanlar",
+    "back": "Tüm asistanlar",
+    "laterNote": "Bu asistan planlama aşamasında. Kapsamı pilot sonuçlarına ve etik değerlendirmeye göre netleşecek.",
+    "nowNote": "Pilot ortaklarımızla TRL 4 doğrulaması sürüyor."
+  },
+  "agents": [
+    {
+      "slug": "onboarding",
+      "name": "Onboarding Agent",
+      "status": "now",
+      "short": "İlk 90 günde rehberlik, kaynaklı yanıtlar ve görev planı.",
+      "tagline": "Yeni çalışanın ilk 90 gününü şirketinizin kendi bilgisiyle yönetir.",
+      "caps": [
+        {
+          "title": "Kaynak gösteren yanıtlar",
+          "body": "Onaylı dokümanlardan yanıt verir ve kaynağı gösterir. Bilgi yoksa tahmin etmez, soruyu İK'ya iletir."
+        },
+        {
+          "title": "Role özel 30/60/90 plan",
+          "body": "Rol profiline göre görev, doküman ve tarih hazırlar. Plan, İK onayından sonra çalışana ulaşır."
+        },
+        {
+          "title": "Görevler ve ilerleme",
+          "body": "Çalışan sıradaki görevini ve nerede olduğunu tek ekranda görür."
+        }
+      ],
+      "audience": [
+        "Yeni işe başlayan çalışanlar",
+        "Onboarding sürecini yöneten İK uzmanları",
+        "İK'nın izin verdiği ölçüde ilerlemeyi gören yöneticiler"
+      ]
+    },
+    {
+      "slug": "hr-assistant",
+      "name": "İK Asistanı",
+      "status": "later",
+      "short": "Rutin İK sorularına kaynaklı yanıtlar.",
+      "tagline": "İzin, bordro ve politika sorularını İK'nın onayladığı kaynaklardan yanıtlar.",
+      "caps": [
+        {
+          "title": "Self-servis yanıtlar",
+          "body": "Çalışanlar izin, yan haklar ve politikalarla ilgili sorularını gün boyu sorabilir."
+        },
+        {
+          "title": "Tekrarlanan soru analizi",
+          "body": "İK hangi soruların tekrarlandığını, hangi dokümanların eksik ya da belirsiz olduğunu görür."
+        },
+        {
+          "title": "Talep yönlendirme",
+          "body": "Asistanın yanıtlayamadığı ya da hassas olan sorular doğru İK kişisine iletilir."
+        }
+      ],
+      "audience": [
+        "Tüm çalışanlar",
+        "İK operasyon ekipleri"
+      ]
+    },
+    {
+      "slug": "learning",
+      "name": "Öğrenme Asistanı",
+      "status": "later",
+      "short": "Role göre öğrenme yolları.",
+      "tagline": "Her rol için adım adım ilerleyen, bilgi yükünü dengeleyen öğrenme yolları sunar.",
+      "caps": [
+        {
+          "title": "Günlük küçük adımlar",
+          "body": "Bilgi tek seferde değil, her gün küçük ve anlamlı parçalar halinde verilir."
+        },
+        {
+          "title": "Role göre içerik",
+          "body": "Eğitim materyalleri çalışanın rolüne ve deneyimine göre sıralanır."
+        },
+        {
+          "title": "Gönüllü rozetler",
+          "body": "Tamamlanan görevler isteğe bağlı rozet ve ilerleme sistemiyle görünür olur."
+        }
+      ],
+      "audience": [
+        "Yeni ve rol değiştiren çalışanlar",
+        "Eğitim ve gelişim ekipleri"
+      ]
+    },
+    {
+      "slug": "culture",
+      "name": "Kültür Asistanı",
+      "status": "later",
+      "short": "Uluslararası çalışanlar için uyum desteği.",
+      "tagline": "Farklı ülkelerden gelen çalışanların şirkete, ekibe ve yeni ülkeye uyumunu destekler.",
+      "caps": [
+        {
+          "title": "Ülke rehberi",
+          "body": "Çalışma izni, sosyal güvenlik ve günlük yaşam konularında onaylı kaynaklardan bilgi verir."
+        },
+        {
+          "title": "Kültür görevleri",
+          "body": "Şirketin yazılı olmayan kurallarını uzun listeler yerine küçük görevlerle tanıtır."
+        },
+        {
+          "title": "Buddy eşleştirme",
+          "body": "İK onayıyla yeni çalışanı deneyimli bir ekip arkadaşıyla tanıştırır."
+        }
+      ],
+      "audience": [
+        "Uluslararası ve yer değiştiren çalışanlar",
+        "Çok uluslu ekiplerin İK sorumluları"
+      ]
+    },
+    {
+      "slug": "manager",
+      "name": "Yönetici Asistanı",
+      "status": "later",
+      "short": "Ekip için anonim ve toplu özetler.",
+      "tagline": "Yöneticilere ekiplerinin uyum ve gelişim sürecine dair toplu, anonim özetler sunar.",
+      "caps": [
+        {
+          "title": "Haftalık ekip özeti",
+          "body": "Tamamlanan görevler, açık sorular ve yaklaşan adımlar ekip düzeyinde özetlenir."
+        },
+        {
+          "title": "Birebir görüşme hazırlığı",
+          "body": "Çalışanın kendi paylaştığı hedeflerden görüşme gündemi önerir."
+        },
+        {
+          "title": "İş yükü görünürlüğü",
+          "body": "Görev dağılımı ekip düzeyinde görülür, bireysel izleme yapılmaz."
+        }
+      ],
+      "audience": [
+        "Ekip yöneticileri",
+        "İK iş ortakları"
+      ]
+    },
+    {
+      "slug": "wellbeing",
+      "name": "İyi Oluş Asistanı",
+      "status": "later",
+      "short": "Gönüllü ve onaya dayalı destek kaynakları.",
+      "tagline": "Çalışanların kendi isteğiyle ulaşabileceği iyi oluş kaynaklarını ve destek kanallarını bir araya getirir.",
+      "caps": [
+        {
+          "title": "Gönüllü check-in",
+          "body": "Çalışan isterse kısa bir check-in ile ihtiyaç duyduğu kaynaklara yönlendirilir."
+        },
+        {
+          "title": "Destek kanalları",
+          "body": "Psikolojik destek, esnek çalışma ve izin seçenekleri tek yerde görünür."
+        },
+        {
+          "title": "Geçiş dönemleri",
+          "body": "Ebeveyn izni dönüşü gibi dönemler için onaylı rehberler sunar."
+        }
+      ],
+      "audience": [
+        "Tüm çalışanlar",
+        "İK ve iş sağlığı ekipleri"
+      ]
+    },
+    {
+      "slug": "crisis",
+      "name": "Kriz Asistanı",
+      "status": "later",
+      "short": "Uzaktan çalışma ve acil durum süreçleri.",
+      "tagline": "Acil durumlarda ve uzaktan çalışmaya geçişte çalışanlara güncel prosedürleri ulaştırır.",
+      "caps": [
+        {
+          "title": "Prosedür rehberi",
+          "body": "Acil durum ve iş sürekliliği prosedürlerini onaylı kaynaklardan anında yanıtlar."
+        },
+        {
+          "title": "Uzaktan başlangıç",
+          "body": "Ofise gelemeyen yeni çalışanlar için uzaktan başlangıç adımları sunar."
+        },
+        {
+          "title": "Destek yönlendirme",
+          "body": "Çalışanları ilgili ekiplere ve destek kanallarına yönlendirir."
+        }
+      ],
+      "audience": [
+        "Tüm çalışanlar",
+        "İş sürekliliği ve İK ekipleri"
+      ]
+    },
+    {
+      "slug": "career",
+      "name": "Kariyer Asistanı",
+      "status": "later",
+      "short": "Kariyer gelişimi görüşmelerine hazırlık.",
+      "tagline": "Çalışanların kariyer hedeflerini netleştirmesine ve gelişim görüşmelerine hazırlanmasına yardım eder.",
+      "caps": [
+        {
+          "title": "Hedef belirleme",
+          "body": "Çalışan kariyer hedeflerini ve ilgi alanlarını düzenli bir şekilde kaydeder."
+        },
+        {
+          "title": "Gelişim fırsatları",
+          "body": "Hedeflere göre şirket içi eğitim ve rol fırsatlarını gösterir."
+        },
+        {
+          "title": "Görüşme hazırlığı",
+          "body": "Kariyer görüşmesi için çalışanın kendi notlarından bir özet hazırlar."
+        }
+      ],
+      "audience": [
+        "Tüm çalışanlar",
+        "Yetenek ve gelişim ekipleri"
+      ]
+    }
+  ]
+}

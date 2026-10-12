@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "templateVersion": "0.3.0",
+  "mode": "guided",
+  "tools": ["claude"],
+  "documents": {
+    "prd": "docs/PRD-NOOVOY-MVP.md",
+    "techdesign": "docs/TechDesign-NOOVOY-MVP.md"
+  }
+}
