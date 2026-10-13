@@ -60,3 +60,4 @@ Update after major decisions, completed phases, or bugs future agents need to kn
 - [ ] OG image, sitemap, robots
 - [x] Playwright smoke tests (tests/smoke.spec.ts, 83 pass) and Lighthouse script (scripts/lighthouse.mjs)
 - [ ] Launch checks
+- Safari does not focus links on tap/click: blur handlers must ignore a null relatedTarget or menus close before the click lands (fixed in MobileMenu/AgentsDropdown, 2026-10-13). Playwright now runs iPhone + desktop Safari projects; don't re-add CSP upgrade-insecure-requests (WebKit applies it to http://localhost).
