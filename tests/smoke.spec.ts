@@ -102,6 +102,14 @@ test("mobile menu opens, lists sections and closes on Escape", async ({ page, is
   await expect(toggle).toBeFocused();
 });
 
+test("mobile menu links navigate when tapped", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "mobile nav");
+  await page.goto("/tr");
+  await page.getByRole("button", { name: "Menü" }).click();
+  await page.locator("#mobile-menu").getByRole("link", { name: "Ekip" }).click();
+  await expect(page).toHaveURL(/\/tr\/team$/);
+});
+
 test("no horizontal overflow on key pages", async ({ page }) => {
   for (const path of ["/tr", "/tr/agents", "/tr/agents/onboarding", "/tr/pricing", "/tr/team"]) {
     await page.goto(path);

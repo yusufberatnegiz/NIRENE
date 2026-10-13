@@ -38,7 +38,7 @@ export function AgentsDropdown(props: { href: string; label: string; toggleLabel
       className="relative flex items-center"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && setOpen(false)}
+      onBlur={(e) => e.relatedTarget && !e.currentTarget.contains(e.relatedTarget) && setOpen(false)}
     >
       <Link href={href} onClick={() => setOpen(false)} aria-current={active ? "page" : undefined} className={`${className} pr-1`}>
         {label}

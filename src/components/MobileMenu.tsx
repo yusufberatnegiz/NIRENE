@@ -36,7 +36,8 @@ export function MobileMenu(props: { label: string; links: Item[]; language: Item
   const row = "block rounded-ui px-4 py-3 text-sm font-medium transition-colors hover:bg-shell active:bg-panel";
 
   return (
-    <div ref={ref} className="xl:hidden" onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && close()}>
+    // relatedTarget is null when Safari taps a link (it does not focus links); taps outside are handled by pointerdown.
+    <div ref={ref} className="xl:hidden" onBlur={(e) => e.relatedTarget && !e.currentTarget.contains(e.relatedTarget) && close()}>
       <button
         ref={button}
         type="button"

@@ -9,6 +9,9 @@ export default defineConfig({
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
+    // Safari does not focus links on tap/click, unlike Chromium; catches blur-closes-menu bugs.
+    { name: "iphone", use: { ...devices["iPhone 13"] } },
+    { name: "safari", use: { ...devices["Desktop Safari"] } },
   ],
   webServer: {
     command: "npm run start",
