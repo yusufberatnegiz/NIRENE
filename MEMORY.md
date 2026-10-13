@@ -30,6 +30,8 @@ Update after major decisions, completed phases, or bugs future agents need to kn
 - 2026-10-13 Status labels: "Pilot programında" (Onboarding) / "Erken erişim" (others). Hero keeps whole-product framing (owner decision), phrased as "designed"; no "today we start with onboarding" line.
 - 2026-10-13 Security copy uses design tense ("tasarlanır") for encryption, pseudonymisation and no-model-training: unverified, owner must confirm before launch.
 
+- 2026-10-13 Hosting: Vercel, live at https://nirene.vercel.app (GitHub main auto-deploys). Live smoke tests 92/92, headers and HTTPS redirect verified.
+
 ## Known Issues
 
 - 2026-10-12 Lighthouse: desktop 100/100/100/100 on /tr, /tr/agents, /tr/agents/onboarding, /tr/pricing, /en; mobile perf 94-96, rest 100. Reveal animations must not leave text semi-transparent once in view (axe flags it): keep opacity in the first 40% of `rise` and no opacity in `tilt-in`.
