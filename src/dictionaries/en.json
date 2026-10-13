@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "{product} | AI assistants for the employee journey",
-    "description": "An ecosystem of assistants that supports employees and HR from the first day to career growth, answering from your approved company documents with sources."
+    "title": "{product} | AI agents for the employee journey",
+    "description": "An ecosystem of agents designed to support employees and HR from the first day to career growth, answering from your approved company documents with sources."
   },
   "nav": {
     "how": "Platform",
@@ -15,15 +15,22 @@
     "agents": "Agents",
     "menu": "Menu",
     "toLight": "Switch to light theme",
-    "toDark": "Switch to dark theme"
+    "toDark": "Switch to dark theme",
+    "agentsMenu": "Open agents list",
+    "primary": "Main menu"
   },
   "cta": {
     "pilot": "Request a pilot",
-    "mailSubject": "{product} pilot request"
+    "mailSubject": "{product} pilot request",
+    "earlyAccess": "Join the early access list",
+    "earlySubject": "{product} early access: {agent}",
+    "howPilot": "How the pilot works",
+    "mailBody": "Hello,\n\nWe would like to learn more about the pilot programme.\n\nCompany:\nNumber of employees:\nDepartment we have in mind:\nYour name and role:\n",
+    "earlyBody": "Hello,\n\nWe would like to join the early access list for this agent.\n\nCompany:\nNumber of employees:\nYour name and role:\n"
   },
   "hero": {
-    "title": "AI assistants for every stage of the employee journey.",
-    "lead": "{product} is an ecosystem of assistants that support employees and HR from the first day to career growth, using your approved company knowledge.",
+    "title": "AI agents for every stage of the employee journey.",
+    "lead": "{product} is an AI agent platform designed to support employees and HR from the first day to career growth, using your approved company knowledge. Each agent's availability is shown on its own page.",
     "float1": "Plan approved",
     "float1Sub": "Sales specialist, 30/60/90",
     "float2": "Source cited",
@@ -36,16 +43,16 @@
     "sources": "Sources",
     "source1": "Employee Handbook, Section 2.4",
     "source2": "Leave Policy v3",
-    "notFound": "When the approved documents do not cover a question, the assistant does not guess. It forwards the question to HR.",
+    "notFound": "When the approved documents do not cover a question, the agent does not guess. It forwards the question to HR.",
     "sample": "Sample interface, not real data."
   },
   "problem": {
     "title": "Employee experience still runs on scattered tools",
     "items": [
       "New hires get the same pile of documents, with no clear sense of which ones apply to their role.",
-      "HR answers the same leave, payroll and policy questions with every intake.",
+      "HR answers the same leave, payroll and policy questions for every new cohort.",
       "Onboarding, learning and career processes run in separate systems that do not talk to each other.",
-      "Managers often notice what their team needs only after a problem has grown."
+      "Managers have to ask HR every time they want to know where a new hire stands."
     ]
   },
   "trust": {
@@ -55,7 +62,7 @@
       "Answer from approved documents and cite the source",
       "Say so when the information is missing and pass the question to HR",
       "Show plans to employees only after HR approval",
-      "Use synthetic or anonymised data during testing and pilots"
+      "Make it clear to users that they are talking to an AI"
     ],
     "doesNotTitle": "It does not",
     "doesNot": [
@@ -65,38 +72,46 @@
       "Perform psychological assessments"
     ],
     "compliance": "Designed in line with KVKK and GDPR principles, with the EU AI Act requirements in mind.",
-    "lead": "{product} assistants inform and guide. They do not make decisions, monitor employees or score them."
+    "lead": "{product} agents inform and guide. They do not make decisions, monitor employees or score them."
   },
   "partners": {
     "title": "Pilot partners and targets",
-    "lead": "Three companies validate the same assistant from three angles."
+    "lead": "We are testing the Onboarding Agent with three partner companies, each from a different angle."
   },
   "targets": {
-    "title": "Pilot targets",
-    "note": "These are targets set for the pilot, not measured results.",
+    "title": "Our targets",
+    "note": "These are targets, not measured results. Pilot measurements are compared with a baseline agreed with HR at the start.",
     "badge": "Target",
     "items": [
       {
         "value": "70%",
-        "label": "fewer repeated HR questions"
+        "label": "fewer repeated HR questions",
+        "group": 0
       },
       {
         "value": "30%",
-        "label": "shorter time to productivity"
+        "label": "shorter time to productivity",
+        "group": 0
       },
       {
         "value": "+15",
-        "label": "eNPS points within 6 months"
+        "label": "eNPS points within 6 months",
+        "group": 1
       },
       {
         "value": "<10%",
-        "label": "attrition in the first 6 months"
+        "label": "first 6-month attrition (company-wide)",
+        "group": 1
       }
+    ],
+    "groups": [
+      "Measured during the pilot",
+      "Long-term targets"
     ]
   },
   "pricing": {
     "title": "Pricing",
-    "note": "Indicative prices, not final. Confirmed during the pilot conversation.",
+    "note": "Prices are for information and depend on scope and headcount.",
     "perMonth": "/ month",
     "plans": {
       "pilot": {
@@ -109,22 +124,29 @@
       },
       "growth": {
         "name": "Growth",
-        "scope": "Up to 500 employees, multiple departments"
+        "scope": "Up to 500 employees; Onboarding Agent plus other agents as they become available"
       },
       "enterprise": {
         "name": "Enterprise",
-        "scope": "Unlimited employees, on-premise option"
+        "scope": "Unlimited employees; on-premises requests are assessed separately"
       }
     },
-    "free": "Free"
+    "free": "Free",
+    "lead": "The pilot programme is free. Plans apply once the product is generally available.",
+    "fromGa": "When generally available"
   },
   "team": {
     "title": "Team",
-    "lead": "{company}, in collaboration with AOSB Technopark and Antalya Bilim University."
+    "lead": "{product} is developed by {company} at AOSB Technopark as part of the {project} R&D project, in collaboration with Antalya Bilim University."
   },
   "contact": {
     "title": "Join the pilot programme",
-    "body": "One department, 15-30 new or recent hires and your handbook are enough. We set up the assistant and prepare the documents together."
+    "body": "One department, 15-30 new or recent hires and your handbook are enough. We set up the agent and prepare the documents together.",
+    "earlyTitle": "Be among the first to use this agent",
+    "earlyBody": "Companies on the list are first in line when the agent becomes available and help shape its scope.",
+    "orWrite": "or write to us directly:",
+    "howPilot": "How the pilot programme works",
+    "security": "Security & data"
   },
   "login": {
     "title": "Sign-in is by invitation",
@@ -137,19 +159,23 @@
     "back": "Back to home"
   },
   "footer": {
-    "rights": "{company}. AOSB Technopark, Antalya.",
+    "product": "Product",
+    "company": "Company",
+    "security": "Security & data",
     "privacy": "Privacy",
-    "builtBy": "Built by Yusuf B. Negiz"
+    "about": "{product} is the AI agent platform of the {project} ecosystem, developed by {company} in collaboration with Antalya Bilim University.",
+    "address": "AOSB Technopark, Döşemealtı, Antalya",
+    "rights": "{company}"
   },
   "app": {
     "label": "Onboarding Agent app preview",
     "nav": [
       "Dashboard",
-      "AI Assistant",
+      "Agent",
       "Missions",
       "Journey"
     ],
-    "title": "AI Assistant",
+    "title": "Agent",
     "subtitle": "Answers come from approved company documents.",
     "q2": "Has the evening shuttle route changed?",
     "a2": "I could not find current information on this in the approved documents. I have passed your question to HR, and you will see the answer here.",
@@ -177,18 +203,18 @@
   "logos": "Pilot partners and collaborators",
   "features": {
     "title": "One platform, shared principles",
-    "lead": "Each assistant focuses on its own job. All of them share the same knowledge base, the same rules and the same HR control.",
+    "lead": "Each agent focuses on its own job. All of them are built on the same knowledge base, the same rules and the same HR control.",
     "grounded": {
       "title": "Every answer has a source",
-      "body": "The assistants answer only from company documents HR has approved, and they show the source. If the information is missing, they do not guess. They pass the question to HR."
+      "body": "Agents answer only from company documents HR has approved, and show the source with every answer. If the information is missing, they do not guess. They pass the question to HR."
     },
     "plan": {
       "title": "One shared employee journey",
-      "body": "The assistants work on the same journey plan. From the first 90 days to career growth, employees see their next step on one screen."
+      "body": "All agents are designed to share the same journey plan, so employees can see their next step on one screen, from the first 90 days to career growth."
     },
     "hr": {
       "title": "HR always has the final say",
-      "body": "HR approves documents and templates, reviews the plans assistants prepare and decides which assistant is introduced and when."
+      "body": "HR approves documents and templates, reviews the plans agents prepare before employees see them, and decides which agents are used."
     }
   },
   "hrPanel": {
@@ -203,7 +229,7 @@
         "Approved"
       ],
       [
-        "HR assistant",
+        "HR specialist",
         "Edited"
       ]
     ],
@@ -234,22 +260,22 @@
   },
   "ecosystem": {
     "eyebrow": "The {project} ecosystem",
-    "title": "Eight assistants, one ecosystem",
-    "lead": "Each assistant has its own job. The Onboarding Agent is being built and validated today, and the others will follow one by one.",
+    "title": "Eight agents, one ecosystem",
+    "lead": "Each agent has its own job. All of them share the same knowledge base and the same principles. The Onboarding Agent is in pilot; the others are in early access.",
     "more": "Explore",
     "all": "All agents"
   },
   "agentsPage": {
     "title": "Agents",
-    "lead": "Each assistant in the {product} ecosystem owns one stage of the employee journey. All of them follow the same principles.",
-    "now": "In development",
-    "later": "Planned",
+    "lead": "{product} is made up of eight agents in the {project} ecosystem. Each owns one stage of the employee journey, and all follow the same principles.",
+    "now": "In pilot",
+    "later": "Early access",
     "caps": "What it does",
     "audience": "Who it is for",
     "others": "Other agents",
     "back": "All agents",
-    "laterNote": "This assistant is in planning. Its scope will be set by pilot results and an ethics review.",
-    "nowNote": "TRL 4 validation is under way with our pilot partners."
+    "laterNote": "Companies on the early access list are first in line when this agent becomes available and help shape its scope.",
+    "nowNote": "Being tested in the field with our pilot partners."
   },
   "agents": [
     {
@@ -273,15 +299,15 @@
       "audience": [
         "New hires",
         "HR specialists who run onboarding",
-        "Managers who see progress where HR allows it"
+        "Managers who, where HR allows it, see only completed tasks"
       ],
       "slug": "onboarding",
       "status": "now"
     },
     {
-      "name": "HR Assistant",
+      "name": "HR Agent",
       "short": "Cited answers to routine HR questions.",
-      "tagline": "Answers leave, payroll and policy questions from sources HR has approved.",
+      "tagline": "Answers leave, payroll process and policy questions from sources HR has approved.",
       "caps": [
         {
           "title": "Self-service answers",
@@ -293,7 +319,7 @@
         },
         {
           "title": "Request routing",
-          "body": "Questions the assistant cannot answer, or sensitive ones, go to the right HR person."
+          "body": "Questions the agent cannot answer, or sensitive ones, go to the right HR person."
         }
       ],
       "audience": [
@@ -304,7 +330,7 @@
       "status": "later"
     },
     {
-      "name": "Learning Assistant",
+      "name": "Learning Agent",
       "short": "Role-based learning paths.",
       "tagline": "Offers step-by-step learning paths for each role that keep the information load manageable.",
       "caps": [
@@ -318,7 +344,7 @@
         },
         {
           "title": "Optional badges",
-          "body": "Completed tasks become visible through an optional badge and progress system."
+          "body": "Employees can track completed tasks through optional badges visible only to them."
         }
       ],
       "audience": [
@@ -329,7 +355,7 @@
       "status": "later"
     },
     {
-      "name": "Culture Assistant",
+      "name": "Culture Agent",
       "short": "Adaptation support for international employees.",
       "tagline": "Helps employees from other countries settle into the company, the team and a new country.",
       "caps": [
@@ -354,9 +380,9 @@
       "status": "later"
     },
     {
-      "name": "Manager Assistant",
-      "short": "Anonymous, aggregated team summaries.",
-      "tagline": "Gives managers aggregated, anonymous summaries of their team's onboarding and development.",
+      "name": "Manager Agent",
+      "short": "Team-level, aggregated summaries.",
+      "tagline": "Gives managers team-level, aggregated summaries of their team's onboarding and development.",
       "caps": [
         {
           "title": "Weekly team summary",
@@ -367,8 +393,8 @@
           "body": "Suggests a meeting agenda from goals the employee has chosen to share."
         },
         {
-          "title": "Workload visibility",
-          "body": "Task distribution is shown at team level. No individual monitoring."
+          "title": "Team-level workload",
+          "body": "Task distribution is shown at team level only. No individual monitoring, nobody is scored."
         }
       ],
       "audience": [
@@ -379,13 +405,13 @@
       "status": "later"
     },
     {
-      "name": "Wellbeing Assistant",
+      "name": "Wellbeing Agent",
       "short": "Voluntary, consent-based support resources.",
       "tagline": "Brings together the wellbeing resources and support channels employees can reach on their own terms.",
       "caps": [
         {
           "title": "Voluntary check-in",
-          "body": "If they choose, employees answer a short check-in and get pointed to relevant resources."
+          "body": "If they choose, employees answer a short question and get pointed to relevant resources. Answers are not reported to managers or HR."
         },
         {
           "title": "Support channels",
@@ -404,7 +430,7 @@
       "status": "later"
     },
     {
-      "name": "Crisis Assistant",
+      "name": "Crisis Agent",
       "short": "Remote work and emergency procedures.",
       "tagline": "Delivers current procedures to employees during emergencies and shifts to remote work.",
       "caps": [
@@ -429,7 +455,7 @@
       "status": "later"
     },
     {
-      "name": "Career Assistant",
+      "name": "Career Agent",
       "short": "Preparation for career development conversations.",
       "tagline": "Helps employees clarify career goals and prepare for development conversations.",
       "caps": [
@@ -453,5 +479,122 @@
       "slug": "career",
       "status": "later"
     }
+  ],
+  "pilotProgram": {
+    "title": "How the pilot programme works",
+    "lead": "A free, three-month programme that starts with one department.",
+    "steps": [
+      {
+        "title": "Intro call",
+        "body": "We agree on the department, the roles and the success criteria together."
+      },
+      {
+        "title": "Document preparation",
+        "body": "The handbook, policies and role descriptions are uploaded with HR approval."
+      },
+      {
+        "title": "Three-month pilot",
+        "body": "15-30 new or recent hires use the agent, HR approves plans and reviews feedback."
+      },
+      {
+        "title": "Results report",
+        "body": "Usage, answer accuracy, feedback and progress against the agreed baseline are reported. The next step is decided together."
+      }
+    ],
+    "provideTitle": "What your company provides",
+    "provide": [
+      "One department and 15-30 new or recent hires",
+      "Approved handbook, policies and role descriptions",
+      "An HR owner who follows the pilot"
+    ],
+    "getTitle": "What you get",
+    "get": [
+      "Support with setup and document preparation",
+      "Technical support throughout the pilot",
+      "A results report based on measurements"
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Where is our data stored?",
+        "a": "Hosting is agreed in the intro call based on your requirements. On-premises requests are assessed separately under the Enterprise plan.",
+        "group": "data"
+      },
+      {
+        "q": "Is employee data sent to the AI model?",
+        "a": "Only a limited part of it. The agent is designed to use only the smallest document excerpt needed for an answer and to replace direct identifiers with pseudonyms before anything reaches the model. How each type of data is processed is shared in writing before the pilot. Company documents and employee questions are designed not to be used for model training.",
+        "group": "data"
+      },
+      {
+        "q": "Which systems does it work with?",
+        "a": "The pilot runs in a web interface with no integration required. Slack, Microsoft Teams and HR system integrations are on the roadmap.",
+        "group": "pilot"
+      },
+      {
+        "q": "Can staff without a desk use it?",
+        "a": "The web interface is designed to work in a phone browser too. How employees without a company email are invited is agreed in the intro call.",
+        "group": "pilot"
+      },
+      {
+        "q": "Which languages are supported?",
+        "a": "The pilot runs in Turkish. Multilingual use is on the roadmap.",
+        "group": "pilot"
+      },
+      {
+        "q": "How long does setup take?",
+        "a": "It depends mostly on how ready your documents are. The timeline is agreed in the intro call.",
+        "group": "pilot"
+      },
+      {
+        "q": "What happens after the pilot?",
+        "a": "We decide together based on the results report. There is no obligation to buy after the pilot. If you continue, you choose the plan that fits your headcount. Pilot data is deleted within a period agreed in writing at the end of the pilot.",
+        "group": "pilot"
+      },
+      {
+        "q": "Does the agent make decisions about employees?",
+        "a": "No. Hiring, pay, promotion and disciplinary decisions always stay with people. The agent informs and guides.",
+        "group": "data"
+      }
+    ]
+  },
+  "security": {
+    "title": "Security & data",
+    "lead": "{product} is designed to process as little employee data as possible and to make every step auditable.",
+    "items": [
+      {
+        "title": "Separation and encryption",
+        "body": "Each company's documents and records are kept apart at database level. Users of one company cannot access another company's data. Data is designed to be encrypted in transit and at rest."
+      },
+      {
+        "title": "Role-based access",
+        "body": "Employees, HR and managers see only what their role requires. The manager view is team-level by default. If HR allows it, a manager sees only the completed onboarding tasks of new hires in their team; questions and answers are never shown."
+      },
+      {
+        "title": "Data minimisation",
+        "body": "Only the document excerpt needed for an answer is used. Direct identifiers are designed to be replaced with pseudonyms before anything reaches the model."
+      },
+      {
+        "title": "Personal and sensitive topics go to people",
+        "body": "Individual pay, health, disciplinary and termination questions are not answered by the agent. They are routed to an authorised person."
+      },
+      {
+        "title": "Logging and auditability",
+        "body": "Every answer is logged with the sources it used. HR reviews answer quality and feedback without seeing employee identities."
+      },
+      {
+        "title": "KVKK and GDPR",
+        "body": "A data processing inventory and privacy notice are prepared with your company before the pilot. Pilot data is deleted within a period agreed in writing at the end of the pilot."
+      }
+    ],
+    "note": "This page describes the product's design principles. Technical and legal details are shared in writing during the pilot conversation."
+  },
+  "homeTrust": {
+    "more": "All principles"
+  },
+  "logoGroups": [
+    "Pilot partners",
+    "Collaborators"
   ]
 }

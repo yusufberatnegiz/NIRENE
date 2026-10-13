@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "{product} | Çalışan yolculuğu için yapay zekâ asistanları",
-    "description": "İşe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı dokümanlarıyla, kaynak göstererek destek olan asistan ekosistemi."
+    "description": "İşe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı dokümanlarıyla, kaynak göstererek destek olmak için tasarlanan asistan ekosistemi."
   },
   "nav": {
     "how": "Platform",
@@ -15,22 +15,29 @@
     "agents": "Asistanlar",
     "menu": "Menü",
     "toLight": "Açık temaya geç",
-    "toDark": "Koyu temaya geç"
+    "toDark": "Koyu temaya geç",
+    "agentsMenu": "Asistan listesini aç",
+    "primary": "Ana menü"
   },
   "cta": {
-    "pilot": "Pilot başvurusu",
-    "mailSubject": "{product} pilot başvurusu"
+    "pilot": "Pilot için başvurun",
+    "mailSubject": "{product} pilot başvurusu",
+    "earlyAccess": "Erken erişim listesine katılın",
+    "earlySubject": "{product} erken erişim: {agent}",
+    "howPilot": "Pilot nasıl işler",
+    "mailBody": "Merhaba,\n\nPilot programı hakkında bilgi almak istiyoruz.\n\nŞirket:\nÇalışan sayısı:\nPilot için düşündüğümüz departman:\nAdınız ve göreviniz:\n",
+    "earlyBody": "Merhaba,\n\nBu asistan için erken erişim listesine katılmak istiyoruz.\n\nŞirket:\nÇalışan sayısı:\nAdınız ve göreviniz:\n"
   },
   "hero": {
-    "title": "Çalışan yolculuğunun her aşaması için yapay zekâ asistanları.",
-    "lead": "{product}, işe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı bilgisiyle destek olan bir asistan ekosistemi.",
+    "title": "Çalışan yolculuğunun her aşaması için yapay zekâ asistanları.",
+    "lead": "{product}, işe başlangıçtan kariyer gelişimine kadar çalışanlara ve İK'ya şirketinizin onaylı bilgisiyle destek olmak için tasarlanan yapay zekâ asistanları platformudur. Her asistanın kullanım durumu kendi sayfasında yer alır.",
     "float1": "Plan onaylandı",
     "float1Sub": "Satış uzmanı, 30/60/90",
     "float2": "Kaynak gösterildi",
     "float2Sub": "Çalışan El Kitabı, 2.4"
   },
   "preview": {
-    "label": "Onboarding Agent yanıt örneği",
+    "label": "Onboarding Asistanı yanıt örneği",
     "question": "Yıllık izin talebimi nasıl iletirim?",
     "answer": "Yıllık izin talebini İK Portalı üzerinden, planlanan izin tarihinden en az 3 iş günü önce iletirsin. Talep yöneticinin onayına gider.",
     "sources": "Kaynaklar",
@@ -45,7 +52,7 @@
       "İşe başlayanlar aynı doküman yığınıyla karşılaşıyor, hangisinin kendi rolü için geçerli olduğu belirsiz kalıyor.",
       "İK ekibi izin, bordro ve politika sorularını her dönem yeniden yanıtlıyor.",
       "Uyum, öğrenme ve kariyer süreçleri ayrı sistemlerde, birbirinden habersiz ilerliyor.",
-      "Yöneticiler ekiplerinin neye ihtiyaç duyduğunu çoğu zaman sorun büyüdükten sonra fark ediyor."
+      "Yöneticiler, yeni çalışanın hangi adımda olduğunu öğrenmek için her seferinde İK'ya soruyor."
     ]
   },
   "trust": {
@@ -55,7 +62,7 @@
       "Onaylı dokümanlardan, kaynak göstererek yanıt verir",
       "Bilgi yoksa bunu açıkça söyler ve soruyu İK'ya iletir",
       "Planları İK onayından sonra çalışana sunar",
-      "Test ve pilot süreçlerinde sentetik ya da anonim veriyle çalışır"
+      "Kullanıcıya yapay zekâ ile konuştuğunu açıkça belirtir"
     ],
     "doesNotTitle": "Yapmaz",
     "doesNot": [
@@ -69,34 +76,42 @@
   },
   "partners": {
     "title": "Pilot ortakları ve hedefler",
-    "lead": "Üç şirket, aynı asistanı üç farklı açıdan doğruluyor."
+    "lead": "Onboarding Asistanı'nı üç ortak şirketle, üç farklı açıdan test ediyoruz."
   },
   "targets": {
-    "title": "Pilot hedeflerimiz",
-    "note": "Bu rakamlar ölçülmüş sonuçlar değil, pilot süreç için belirlenen hedeflerdir.",
+    "title": "Hedeflerimiz",
+    "note": "Bu rakamlar ölçülmüş sonuçlar değil, hedeflerdir. Pilot ölçümleri, başlangıçta İK ile birlikte alınan referans değerlerle karşılaştırılır.",
     "badge": "Hedef",
     "items": [
       {
         "value": "%70",
-        "label": "daha az tekrar eden İK sorusu"
+        "label": "daha az tekrar eden İK sorusu",
+        "group": 0
       },
       {
         "value": "%30",
-        "label": "daha kısa uyum süresi"
+        "label": "daha kısa tam verime ulaşma süresi",
+        "group": 0
       },
       {
         "value": "+15",
-        "label": "puan eNPS artışı, 6 ayda"
+        "label": "puan eNPS artışı, 6 ayda",
+        "group": 1
       },
       {
         "value": "<%10",
-        "label": "ilk 6 ayda ayrılma oranı"
+        "label": "ilk 6 ayda ayrılma oranı (şirket geneli)",
+        "group": 1
       }
+    ],
+    "groups": [
+      "Pilot süresince ölçülen",
+      "Uzun vadeli hedefler"
     ]
   },
   "pricing": {
     "title": "Fiyatlandırma",
-    "note": "Örnek fiyatlardır, kesinleşmemiştir. Pilot görüşmesinde netleşir.",
+    "note": "Fiyatlar bilgilendirme amaçlıdır; kapsam ve çalışan sayısına göre netleşir.",
     "perMonth": "/ ay",
     "plans": {
       "pilot": {
@@ -105,26 +120,33 @@
       },
       "starter": {
         "name": "Starter",
-        "scope": "100 çalışana kadar, Onboarding Agent"
+        "scope": "100 çalışana kadar, Onboarding Asistanı"
       },
       "growth": {
         "name": "Growth",
-        "scope": "500 çalışana kadar, çoklu departman"
+        "scope": "500 çalışana kadar; Onboarding Asistanı ve kullanıma açıldıkça diğer asistanlar"
       },
       "enterprise": {
         "name": "Enterprise",
-        "scope": "Sınırsız çalışan, kurum içi kurulum seçeneği"
+        "scope": "Sınırsız çalışan; kurum içi kurulum talepleri ayrıca değerlendirilir"
       }
     },
-    "free": "Ücretsiz"
+    "free": "Ücretsiz",
+    "lead": "Pilot programı ücretsizdir. Paketler genel kullanıma açıldığında geçerli olur.",
+    "fromGa": "Genel kullanıma açıldığında"
   },
   "team": {
     "title": "Ekip",
-    "lead": "{company}, AOSB Teknopark ve Antalya Bilim Üniversitesi iş birliğiyle."
+    "lead": "{product}, AOSB Teknopark'ta yer alan {company} tarafından {project} Ar-Ge projesi kapsamında, Antalya Bilim Üniversitesi iş birliğiyle geliştiriliyor."
   },
   "contact": {
     "title": "Pilot programına katılın",
-    "body": "Bir departman, 15-30 yeni ya da yakın zamanda işe başlamış çalışan ve el kitabınız yeterli. Kurulumu ve dokümanların hazırlanmasını birlikte yapıyoruz."
+    "body": "Bir departman, 15-30 yeni ya da yakın zamanda işe başlamış çalışan ve el kitabınız yeterli. Kurulumu ve dokümanların hazırlanmasını birlikte yapıyoruz.",
+    "earlyTitle": "Bu asistanı ilk kullananlardan olun",
+    "earlyBody": "Listeye katılan şirketler, asistan kullanıma açıldığında ilk sırada yer alır ve kapsamın şekillenmesine katkı verir.",
+    "orWrite": "veya doğrudan yazın:",
+    "howPilot": "Pilot programı nasıl işler",
+    "security": "Güvenlik ve veri"
   },
   "login": {
     "title": "Giriş yalnızca davetle",
@@ -133,28 +155,32 @@
   },
   "privacy": {
     "title": "Gizlilik",
-    "body": "Bu sayfa çerez kullanmaz ve ziyaretçilerden kişisel veri toplamaz. Pilot başvurusu için e-posta istemcinizden gönderdiğiniz bilgiler yalnızca başvurunuzu yanıtlamak için kullanılır.",
+    "body": "Bu site çerez kullanmaz ve ziyaretçilerden kişisel veri toplamaz. Pilot başvurusu için e-posta istemcinizden gönderdiğiniz bilgiler yalnızca başvurunuzu yanıtlamak için kullanılır.",
     "back": "Ana sayfaya dön"
   },
   "footer": {
-    "rights": "{company}. AOSB Teknopark, Antalya.",
+    "product": "Ürün",
+    "company": "Kurum",
+    "security": "Güvenlik ve veri",
     "privacy": "Gizlilik",
-    "builtBy": "Yusuf B. Negiz tarafından geliştirildi"
+    "about": "{product}, {company} tarafından Antalya Bilim Üniversitesi iş birliğiyle geliştirilen {project} ekosisteminin yapay zekâ asistanları platformudur.",
+    "address": "AOSB Teknopark, Döşemealtı, Antalya",
+    "rights": "{company}"
   },
   "app": {
-    "label": "Onboarding Agent uygulama önizlemesi",
+    "label": "Onboarding Asistanı uygulama önizlemesi",
     "nav": [
       "Panel",
-      "AI Asistan",
+      "Asistan",
       "Görevler",
       "Yolculuk"
     ],
-    "title": "AI Asistan",
+    "title": "Asistan",
     "subtitle": "Yanıtlar onaylı şirket dokümanlarından gelir.",
     "q2": "Akşam servisinin güzergahı değişti mi?",
     "a2": "Onaylı dokümanlarda bu konuda güncel bir bilgi bulamadım. Sorunu İK ekibine ilettim, yanıt gelince burada göreceksin.",
     "escalated": "İK'ya iletildi",
-    "input": "Bir soru yazın",
+    "input": "Bir soru yaz",
     "journey": "Yolculuğun",
     "week": "2. hafta",
     "progress": "%42 tamamlandı",
@@ -177,18 +203,18 @@
   "logos": "Pilot ortakları ve iş birlikleri",
   "features": {
     "title": "Tek platform, ortak ilkeler",
-    "lead": "Her asistan kendi işine odaklanır. Hepsi aynı bilgi tabanını, aynı kuralları ve aynı İK kontrolünü paylaşır.",
+    "lead": "Her asistan kendi işine odaklanır. Hepsi aynı bilgi tabanı, aynı kurallar ve aynı İK kontrolü üzerine kurulur.",
     "grounded": {
       "title": "Her yanıtın bir kaynağı var",
-      "body": "Asistanlar yalnızca İK'nın onayladığı şirket dokümanlarından yanıt üretir ve kaynağı gösterir. Bilgi yoksa tahmin etmez, soruyu İK'ya iletir."
+      "body": "Asistanlar yalnızca İK'nın onayladığı şirket dokümanlarından yanıt üretir ve her yanıtta kaynağı gösterir. Bilgi yoksa tahmin etmez, soruyu İK'ya iletir."
     },
     "plan": {
       "title": "Ortak bir çalışan yolculuğu",
-      "body": "Asistanlar aynı yolculuk planı üzerinde çalışır. İlk 90 günden kariyer gelişimine kadar çalışan sıradaki adımını tek ekranda görür."
+      "body": "Tüm asistanlar aynı yolculuk planını kullanacak şekilde tasarlanır. Çalışan, ilk 90 günden kariyer gelişimine kadar sıradaki adımını tek ekranda görebilecek."
     },
     "hr": {
       "title": "Son söz her zaman İK'da",
-      "body": "İK dokümanları ve şablonları onaylar, asistanların hazırladığı planları gözden geçirir ve hangi asistanın ne zaman devreye gireceğine karar verir."
+      "body": "İK dokümanları ve şablonları onaylar, asistanların hazırladığı planları çalışana ulaşmadan önce gözden geçirir ve hangi asistanların kullanılacağına karar verir."
     }
   },
   "hrPanel": {
@@ -203,7 +229,7 @@
         "Onaylandı"
       ],
       [
-        "İK asistanı",
+        "İK uzmanı",
         "Düzenlendi"
       ]
     ],
@@ -235,26 +261,26 @@
   "ecosystem": {
     "eyebrow": "{project} ekosistemi",
     "title": "Sekiz asistan, tek ekosistem",
-    "lead": "Her asistanın kendi görevi var. Onboarding Agent bugün geliştiriliyor ve doğrulanıyor, diğerleri sırayla devreye alınacak.",
+    "lead": "Her asistanın kendi görevi var. Hepsi aynı bilgi tabanını ve aynı ilkeleri paylaşır. Onboarding Asistanı pilot programında, diğerleri erken erişimde.",
     "more": "İncele",
     "all": "Tüm asistanlar"
   },
   "agentsPage": {
     "title": "Asistanlar",
-    "lead": "{product} ekosistemindeki her asistan çalışan yolculuğunun bir aşamasından sorumlu. Hepsi aynı ilkelere bağlı.",
-    "now": "Geliştiriliyor",
-    "later": "Planlanıyor",
+    "lead": "{product}, {project} ekosistemindeki sekiz asistandan oluşur. Her asistan çalışan yolculuğunun bir aşamasından sorumludur ve hepsi aynı ilkelere bağlıdır.",
+    "now": "Pilot programında",
+    "later": "Erken erişim",
     "caps": "Ne yapar",
     "audience": "Kimler için",
     "others": "Diğer asistanlar",
     "back": "Tüm asistanlar",
-    "laterNote": "Bu asistan planlama aşamasında. Kapsamı pilot sonuçlarına ve etik değerlendirmeye göre netleşecek.",
-    "nowNote": "Pilot ortaklarımızla TRL 4 doğrulaması sürüyor."
+    "laterNote": "Erken erişim listesindeki şirketler, asistan kullanıma açıldığında ilk sırada yer alır ve kapsamın şekillenmesine katkı verir.",
+    "nowNote": "Pilot ortaklarımızla sahada test ediliyor."
   },
   "agents": [
     {
       "slug": "onboarding",
-      "name": "Onboarding Agent",
+      "name": "Onboarding Asistanı",
       "status": "now",
       "short": "İlk 90 günde rehberlik, kaynaklı yanıtlar ve görev planı.",
       "tagline": "Yeni çalışanın ilk 90 gününü şirketinizin kendi bilgisiyle yönetir.",
@@ -275,7 +301,7 @@
       "audience": [
         "Yeni işe başlayan çalışanlar",
         "Onboarding sürecini yöneten İK uzmanları",
-        "İK'nın izin verdiği ölçüde ilerlemeyi gören yöneticiler"
+        "İK izin verdiğinde yalnızca tamamlanan görevleri gören yöneticiler"
       ]
     },
     {
@@ -283,11 +309,11 @@
       "name": "İK Asistanı",
       "status": "later",
       "short": "Rutin İK sorularına kaynaklı yanıtlar.",
-      "tagline": "İzin, bordro ve politika sorularını İK'nın onayladığı kaynaklardan yanıtlar.",
+      "tagline": "İzin, bordro süreci ve politika sorularını İK'nın onayladığı kaynaklardan yanıtlar.",
       "caps": [
         {
-          "title": "Self-servis yanıtlar",
-          "body": "Çalışanlar izin, yan haklar ve politikalarla ilgili sorularını gün boyu sorabilir."
+          "title": "Gün boyu yanıt",
+          "body": "Çalışanlar izin, yan haklar ve politikalarla ilgili sorularını günün her saatinde sorabilir."
         },
         {
           "title": "Tekrarlanan soru analizi",
@@ -320,7 +346,7 @@
         },
         {
           "title": "Gönüllü rozetler",
-          "body": "Tamamlanan görevler isteğe bağlı rozet ve ilerleme sistemiyle görünür olur."
+          "body": "Çalışan, tamamlanan görevlerini yalnızca kendisinin gördüğü isteğe bağlı rozetlerle takip edebilir."
         }
       ],
       "audience": [
@@ -344,8 +370,8 @@
           "body": "Şirketin yazılı olmayan kurallarını uzun listeler yerine küçük görevlerle tanıtır."
         },
         {
-          "title": "Buddy eşleştirme",
-          "body": "İK onayıyla yeni çalışanı deneyimli bir ekip arkadaşıyla tanıştırır."
+          "title": "Deneyimli bir çalışma arkadaşı",
+          "body": "İK onayıyla yeni çalışanı benzer deneyimden geçmiş bir ekip arkadaşıyla tanıştırır."
         }
       ],
       "audience": [
@@ -357,8 +383,8 @@
       "slug": "manager",
       "name": "Yönetici Asistanı",
       "status": "later",
-      "short": "Ekip için anonim ve toplu özetler.",
-      "tagline": "Yöneticilere ekiplerinin uyum ve gelişim sürecine dair toplu, anonim özetler sunar.",
+      "short": "Ekip düzeyinde, toplu özetler.",
+      "tagline": "Yöneticilere ekiplerinin uyum ve gelişim sürecine dair ekip düzeyinde, toplu özetler sunar.",
       "caps": [
         {
           "title": "Haftalık ekip özeti",
@@ -369,8 +395,8 @@
           "body": "Çalışanın kendi paylaştığı hedeflerden görüşme gündemi önerir."
         },
         {
-          "title": "İş yükü görünürlüğü",
-          "body": "Görev dağılımı ekip düzeyinde görülür, bireysel izleme yapılmaz."
+          "title": "Ekip düzeyinde iş yükü",
+          "body": "Görev dağılımı yalnızca ekip düzeyinde görülür. Bireysel izleme yapılmaz, kimse puanlanmaz."
         }
       ],
       "audience": [
@@ -386,8 +412,8 @@
       "tagline": "Çalışanların kendi isteğiyle ulaşabileceği iyi oluş kaynaklarını ve destek kanallarını bir araya getirir.",
       "caps": [
         {
-          "title": "Gönüllü check-in",
-          "body": "Çalışan isterse kısa bir check-in ile ihtiyaç duyduğu kaynaklara yönlendirilir."
+          "title": "Gönüllü durum sorusu",
+          "body": "Çalışan isterse kısa bir soruyu yanıtlar ve ihtiyaç duyduğu kaynaklara yönlendirilir. Yanıtlar yöneticiye ya da İK'ya raporlanmaz."
         },
         {
           "title": "Destek kanalları",
@@ -453,5 +479,122 @@
         "Yetenek ve gelişim ekipleri"
       ]
     }
+  ],
+  "pilotProgram": {
+    "title": "Pilot programı nasıl işler",
+    "lead": "Tek bir departmanla başlayan, üç ay süren ve ücretsiz olan bir program.",
+    "steps": [
+      {
+        "title": "Tanışma görüşmesi",
+        "body": "Departmanı, rolleri ve başarı ölçütlerini birlikte belirleriz."
+      },
+      {
+        "title": "Doküman hazırlığı",
+        "body": "El kitabı, politikalar ve rol tanımları İK onayıyla sisteme yüklenir."
+      },
+      {
+        "title": "Üç aylık pilot",
+        "body": "15-30 yeni ya da yakın zamanda başlamış çalışan asistanı kullanır, İK planları onaylar ve geri bildirimleri inceler."
+      },
+      {
+        "title": "Sonuç raporu",
+        "body": "Kullanım, yanıt doğruluğu, geri bildirimler ve başlangıç değerlerine göre hedefler raporlanır. Devam kararı birlikte verilir."
+      }
+    ],
+    "provideTitle": "Şirketinizden beklenenler",
+    "provide": [
+      "Bir departman ve 15-30 yeni ya da yakın zamanda başlamış çalışan",
+      "Onaylı el kitabı, politikalar ve rol tanımları",
+      "Pilotu takip edecek bir İK sorumlusu"
+    ],
+    "getTitle": "Size sağladıklarımız",
+    "get": [
+      "Kurulum ve doküman hazırlığında destek",
+      "Pilot boyunca teknik destek",
+      "Ölçümlere dayanan bir sonuç raporu"
+    ]
+  },
+  "faq": {
+    "title": "Sık sorulan sorular",
+    "items": [
+      {
+        "q": "Verilerimiz nerede saklanır?",
+        "a": "Barındırma yeri tanışma görüşmesinde şirketinizin gereksinimlerine göre belirlenir. Kurum içi kurulum talepleri Enterprise kapsamında ayrıca değerlendirilir.",
+        "group": "data"
+      },
+      {
+        "q": "Çalışan verileri yapay zekâ modeline gönderiliyor mu?",
+        "a": "Yalnızca sınırlı bir kısmı. Asistan, yanıt için gereken en küçük doküman parçasını kullanacak ve doğrudan kimlik bilgilerini modele gitmeden önce takma adlarla değiştirecek şekilde tasarlanır. Hangi verinin nasıl işlendiği pilot öncesinde yazılı olarak paylaşılır. Şirket dokümanları ve çalışan soruları model eğitimi için kullanılmayacak şekilde tasarlanır.",
+        "group": "data"
+      },
+      {
+        "q": "Hangi sistemlerle çalışır?",
+        "a": "Pilot, entegrasyon gerektirmeden web arayüzü üzerinden yürütülür. Slack, Microsoft Teams ve İK sistemleriyle entegrasyon yol haritasındadır.",
+        "group": "pilot"
+      },
+      {
+        "q": "Masa başında çalışmayan personel de kullanabilir mi?",
+        "a": "Web arayüzü telefon tarayıcısından da kullanılacak şekilde tasarlanır. Kurumsal e-postası olmayan çalışanların nasıl davet edileceği tanışma görüşmesinde birlikte belirlenir.",
+        "group": "pilot"
+      },
+      {
+        "q": "Hangi dilleri destekler?",
+        "a": "Pilot Türkçe yürütülür. Çok dilli kullanım yol haritasındadır.",
+        "group": "pilot"
+      },
+      {
+        "q": "Kurulum ne kadar sürer?",
+        "a": "Süre büyük ölçüde dokümanlarınızın hazırlık durumuna bağlıdır. Takvim tanışma görüşmesinde birlikte belirlenir.",
+        "group": "pilot"
+      },
+      {
+        "q": "Pilot sonrasında ne olur?",
+        "a": "Sonuç raporuna göre birlikte karar verilir. Pilot sonrasında satın alma zorunluluğu yoktur. Devam ederseniz çalışan sayısına uygun paket seçilir. Pilot verileri, pilot bitiminde yazılı olarak belirlenen süre içinde silinir.",
+        "group": "pilot"
+      },
+      {
+        "q": "Asistan çalışanlar hakkında karar verir mi?",
+        "a": "Hayır. İşe alım, ücret, terfi ve disiplin kararları her zaman insanlara aittir. Asistan bilgi verir ve yönlendirir.",
+        "group": "data"
+      }
+    ]
+  },
+  "security": {
+    "title": "Güvenlik ve veri",
+    "lead": "{product}, çalışan verisini olabildiğince az işleyecek ve her adımı denetlenebilir kılacak şekilde tasarlanır.",
+    "items": [
+      {
+        "title": "Ayrıştırma ve şifreleme",
+        "body": "Her şirketin dokümanları ve kayıtları veritabanı düzeyinde ayrı tutulur. Bir şirketin kullanıcıları başka bir şirketin verisine erişemez. Veriler aktarım sırasında ve depolamada şifrelenecek şekilde tasarlanır."
+      },
+      {
+        "title": "Rol bazlı erişim",
+        "body": "Çalışan, İK ve yönetici yalnızca rolünün gerektirdiği bilgiyi görür. Yönetici görünümü varsayılan olarak ekip düzeyindedir. İK izin verirse yönetici, ekibindeki yeni çalışanların yalnızca tamamlanan onboarding görevlerini görür; sorular ve yanıtlar gösterilmez."
+      },
+      {
+        "title": "Veri minimizasyonu",
+        "body": "Yanıt için yalnızca gereken doküman parçası kullanılır. Doğrudan kimlik bilgileri modele gitmeden önce takma adlarla değiştirilecek şekilde tasarlanır."
+      },
+      {
+        "title": "Kişisel ve hassas konular insana gider",
+        "body": "Kişiye özel ücret, sağlık, disiplin ve işten ayrılma soruları asistan tarafından yanıtlanmaz, yetkili kişiye yönlendirilir."
+      },
+      {
+        "title": "Kayıt ve denetlenebilirlik",
+        "body": "Her yanıt kullandığı kaynakla birlikte kaydedilir. İK, yanıt kalitesini ve geri bildirimleri çalışan kimliği gösterilmeden inceler."
+      },
+      {
+        "title": "KVKK ve GDPR",
+        "body": "Pilot öncesinde veri işleme envanteri ve aydınlatma metni şirketinizle birlikte hazırlanır. Pilot verileri, pilot bitiminde yazılı olarak belirlenen süre içinde silinir."
+      }
+    ],
+    "note": "Bu sayfa ürünün tasarım ilkelerini anlatır. Teknik ve hukuki ayrıntılar tanışma görüşmesinde yazılı olarak paylaşılır."
+  },
+  "homeTrust": {
+    "more": "Tüm ilkeler"
+  },
+  "logoGroups": [
+    "Pilot ortakları",
+    "İş birlikleri"
   ]
 }

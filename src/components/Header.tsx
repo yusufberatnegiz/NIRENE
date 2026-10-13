@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import type { Dictionary, Locale } from "@/i18n";
 import { brand } from "@/i18n";
-import { AgentIcon } from "./AgentIcon";
+import { AgentsDropdown } from "./AgentsDropdown";
 import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeToggle } from "./ThemeToggle";
@@ -10,9 +9,10 @@ import { button, CtaArrow, mailto } from "./ui";
 
 type Props = { lang: Locale; t: Dictionary; path?: string };
 
-const linkClass = "inline-flex items-center gap-1 rounded-full px-3 py-2 transition-colors duration-300 ease-premium hover:bg-shell hover:text-ink";
+const linkClass = "inline-flex items-center gap-1 rounded-full px-3 py-2 transition-colors duration-300 ease-premium hover:bg-shell hover:text-ink active:bg-panel";
 
 // Floating island nav: solid surface (no blur, per project rules), detached from the top edge.
+// Full nav from xl; below xl the links live in MobileMenu, below sm also language and sign in.
 export function Header({ lang, t, path = "" }: Props) {
   const other = lang === "tr" ? "en" : "tr";
   const home = `/${lang}`;
@@ -22,32 +22,35 @@ export function Header({ lang, t, path = "" }: Props) {
     ["/principles", t.nav.trust],
     ["/pricing", t.nav.pricing],
     ["/team", t.nav.team],
-  ].map(([p, label]) => [`${home}${p}`, label, path.startsWith(p)] as const);
+  ].map(([p, label]) => ({ href: `${home}${p}`, label, active: path.startsWith(p) }));
+  const agents = t.agents.map((a) => ({
+    href: `${home}/agents/${a.slug}`,
+    slug: a.slug,
+    name: a.name,
+    live: a.status === "now",
+    current: path === `/agents/${a.slug}`,
+    status: a.status === "now" ? t.agentsPage.now : t.agentsPage.later,
+  }));
+  const cta = { href: mailto(brand(t.cta.mailSubject), t.cta.mailBody), label: t.cta.pilot };
 
   return (
     <header className="sticky top-3 z-20 px-3 sm:top-4">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded-full focus:bg-surface focus:px-4 focus:py-2">
         {t.nav.skip}
       </a>
-      <div className="mx-auto flex h-14 max-w-5xl items-center gap-6 rounded-full bg-surface pl-5 pr-2 shadow-soft ring-1 ring-line">
-        <Link href={home} aria-label={brand("{product}")}>
+      <div className="relative mx-auto flex h-14 max-w-6xl items-center gap-3 rounded-full bg-surface pl-4 pr-2 shadow-soft ring-1 ring-line sm:gap-6 sm:pl-5">
+        <Link href={home} aria-label={brand("{product}")} className="shrink-0">
           <Logo />
         </Link>
-        <nav aria-label="Primary" className="hidden lg:block">
+        <nav aria-label={t.nav.primary} className="hidden xl:block">
           <ul className="flex items-center gap-1 text-sm text-muted">
-            {links.map(([href, label, active]) =>
-              href.endsWith("/agents") ? (
-                <li key={href} className="group relative">
-                  <Link href={href} aria-current={active ? "page" : undefined} className={`${linkClass} ${active ? "bg-shell text-ink" : ""}`}>
-                    {label}
-                    <CaretDown size={12} weight="bold" aria-hidden="true" className="transition-transform duration-300 group-hover:rotate-180 group-has-[:focus-visible]:rotate-180" />
-                  </Link>
-                  <AgentsMenu lang={lang} t={t} />
-                </li>
+            {links.map((l) =>
+              l.href.endsWith("/agents") ? (
+                <AgentsDropdown key={l.href} href={l.href} label={l.label} toggleLabel={t.nav.agentsMenu} active={l.active} items={agents} className={`${linkClass} ${l.active ? "bg-shell text-ink" : ""}`} />
               ) : (
-                <li key={href}>
-                  <Link href={href} aria-current={active ? "page" : undefined} className={`${linkClass} ${active ? "bg-shell text-ink" : ""}`}>
-                    {label}
+                <li key={l.href}>
+                  <Link href={l.href} aria-current={l.active ? "page" : undefined} className={`${linkClass} ${l.active ? "bg-shell text-ink" : ""}`}>
+                    {l.label}
                   </Link>
                 </li>
               ),
@@ -55,45 +58,28 @@ export function Header({ lang, t, path = "" }: Props) {
           </ul>
         </nav>
         <div className="ml-auto flex items-center gap-1 sm:gap-2">
-          <MobileMenu label={t.nav.menu} links={links.map(([href, label]) => [href, label] as const)} />
+          <MobileMenu
+            label={t.nav.menu}
+            links={links}
+            language={{ href: `/${other}${path}`, label: t.nav.languageLabel, lang: other, name: t.nav.language }}
+            signIn={{ href: `/${lang}/login`, label: t.nav.signIn }}
+            cta={cta}
+          />
           <ThemeToggle toLight={t.nav.toLight} toDark={t.nav.toDark} />
-          <Link href={`/${other}${path}`} hrefLang={other} lang={other} aria-label={t.nav.languageLabel} className="rounded-full px-3 py-2 text-sm text-muted hover:text-ink">
+          <Link href={`/${other}${path}`} hrefLang={other} lang={other} aria-label={t.nav.languageLabel} className="hidden rounded-full px-3 py-2 text-sm text-muted transition-colors hover:bg-shell hover:text-ink active:bg-panel sm:inline-flex">
             {t.nav.language}
           </Link>
-          <Link href={`/${lang}/login`} className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold hover:bg-shell">
+          <Link href={`/${lang}/login`} className="hidden whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold transition-colors hover:bg-shell active:bg-panel sm:inline-flex">
             {t.nav.signIn}
           </Link>
           <div className="hidden md:block">
-            <a href={mailto(brand(t.cta.mailSubject))} className={button.primary}>
-              {t.cta.pilot}
+            <a href={cta.href} className={button.primary}>
+              {cta.label}
               <CtaArrow />
             </a>
           </div>
         </div>
       </div>
     </header>
-  );
-}
-
-// CSS-only dropdown: opens on hover and on keyboard focus (focus-visible, so a mouse click does not keep it open).
-function AgentsMenu({ lang, t }: { lang: Locale; t: Dictionary }) {
-  return (
-    <div className="invisible absolute left-1/2 top-full z-30 w-[34rem] -translate-x-1/2 translate-y-1 pt-3 opacity-0 transition duration-300 ease-premium group-has-[:focus-visible]:visible group-has-[:focus-visible]:translate-y-0 group-has-[:focus-visible]:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-      <ul className="grid grid-cols-2 gap-1 rounded-2xl bg-surface p-2 text-ink shadow-soft ring-1 ring-line">
-        {t.agents.map((a) => (
-          <li key={a.slug}>
-            <Link href={`/${lang}/agents/${a.slug}`} className="flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-shell">
-              <span className={`flex size-9 shrink-0 items-center justify-center rounded-lg ${a.status === "now" ? "bg-accent text-accent-ink" : "bg-panel"}`}>
-                <AgentIcon slug={a.slug} size={18} />
-              </span>
-              <span>
-                <span className="block text-sm font-semibold">{a.name}</span>
-                <span className="block text-xs text-muted">{a.status === "now" ? t.agentsPage.now : t.agentsPage.later}</span>
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }

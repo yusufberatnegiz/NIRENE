@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import tr from "../src/dictionaries/tr.json";
 
-const pages = ["", "/platform", "/agents", "/principles", "/pricing", "/team", "/login", "/privacy"];
+const pages = ["", "/platform", "/agents", "/principles", "/pricing", "/team", "/security", "/login", "/privacy"];
 const agentSlugs = tr.agents.map((a) => a.slug);
 
 test("root redirects to Turkish, English Accept-Language to /en", async ({ page, browser }) => {
@@ -59,11 +59,12 @@ test("metrics and pricing carry their target/indicative labels", async ({ page }
   await page.goto("/tr");
   await expect(page.getByText("Hedef", { exact: true })).toBeVisible();
   await page.goto("/tr/pricing");
-  await expect(page.getByText(/Örnek fiyatlardır/)).toBeVisible();
+  await expect(page.getByText(/bilgilendirme amaçlıdır/)).toBeVisible();
 });
 
-test("language switch keeps the current page", async ({ page }) => {
+test("language switch keeps the current page", async ({ page, isMobile }) => {
   await page.goto("/tr/pricing");
+  if (isMobile) await page.getByRole("button", { name: "Menü" }).click();
   await page.getByRole("link", { name: "Switch to English" }).click();
   await expect(page).toHaveURL(/\/en\/pricing$/);
 });
@@ -72,7 +73,7 @@ test("new page opens at the top after navigating from the bottom", async ({ page
   test.skip(isMobile, "desktop nav");
   await page.goto("/tr");
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-  await page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "Ekip" }).click();
+  await page.getByRole("navigation", { name: "Ana menü" }).getByRole("link", { name: "Ekip" }).click();
   await expect(page).toHaveURL(/\/tr\/team$/);
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
 });
@@ -80,7 +81,7 @@ test("new page opens at the top after navigating from the bottom", async ({ page
 test("agents dropdown opens on hover and links to agent pages", async ({ page, isMobile }) => {
   test.skip(isMobile, "desktop nav");
   await page.goto("/tr");
-  await page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "Asistanlar" }).hover();
+  await page.getByRole("navigation", { name: "Ana menü" }).getByRole("link", { name: "Asistanlar" }).hover();
   const item = page.getByRole("link", { name: /Kültür Asistanı/ }).first();
   await expect(item).toBeVisible();
   await item.click();
@@ -93,11 +94,12 @@ test("mobile menu opens, lists sections and closes on Escape", async ({ page, is
   const toggle = page.getByRole("button", { name: "Menü" });
   await toggle.click();
   await expect(toggle).toHaveAttribute("aria-expanded", "true");
-  for (const name of ["Platform", "Asistanlar", "İlkeler", "Fiyatlar", "Ekip"]) {
+  for (const name of ["Platform", "Asistanlar", "İlkeler", "Fiyatlar", "Ekip", "Giriş yap", "Pilot için başvurun"]) {
     await expect(page.locator("#mobile-menu").getByRole("link", { name })).toBeVisible();
   }
   await page.keyboard.press("Escape");
   await expect(page.locator("#mobile-menu")).toHaveCount(0);
+  await expect(toggle).toBeFocused();
 });
 
 test("no horizontal overflow on key pages", async ({ page }) => {
@@ -120,4 +122,24 @@ test("theme toggle switches, persists and overrides the system setting", async (
   expect(await bg()).toBe("rgb(0, 0, 0)");
   await page.locator("header button", { hasText: "Açık temaya geç" }).click();
   expect(await bg()).toBe("rgb(245, 246, 248)");
+});
+
+test("planned agents offer early access, not a pilot", async ({ page }) => {
+  await page.goto("/tr/agents/crisis");
+  const cta = page.getByRole("link", { name: /Erken erişim listesine katılın/ }).first();
+  await expect(cta).toBeVisible();
+  expect(await cta.getAttribute("href")).toContain(encodeURIComponent("Kriz Asistanı"));
+});
+
+test("agents dropdown closes on Escape and opens from the caret button", async ({ page, isMobile }) => {
+  test.skip(isMobile, "desktop nav");
+  await page.goto("/tr");
+  const caret = page.getByRole("button", { name: "Asistan listesini aç" });
+  await caret.focus();
+  await page.keyboard.press("Enter");
+  await expect(caret).toHaveAttribute("aria-expanded", "true");
+  await expect(page.locator("#agents-menu")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(caret).toHaveAttribute("aria-expanded", "false");
+  await expect(caret).toBeFocused();
 });

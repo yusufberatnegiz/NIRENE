@@ -51,20 +51,23 @@ export default async function AgentPage({ params }: PageProps<"/[lang]/agents/[s
           <div className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
             <div className="enter">
               <div className="flex items-center gap-4">
-                <span className={`flex size-14 items-center justify-center rounded-2xl ${live ? "bg-accent text-accent-ink" : "bg-panel"}`}>
+                <span className={`flex size-14 items-center justify-center rounded-core ${live ? "bg-accent text-accent-ink" : "bg-panel"}`}>
                   <AgentIcon slug={agent.slug} size={28} />
                 </span>
                 <span className={`rounded-full px-3 py-1 text-xs font-semibold ${live ? "bg-accent-tint text-accent-text" : "bg-panel text-muted"}`}>
                   {live ? p.now : p.later}
                 </span>
               </div>
-              <h1 className="mt-8 font-display text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-balance md:text-7xl">{agent.name}</h1>
+              <h1 className="mt-8 font-display text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-balance sm:text-5xl md:text-6xl">{agent.name}</h1>
             </div>
             <div className="enter enter-2 lg:pb-2">
               <p className="text-lg leading-relaxed text-muted">{agent.tagline}</p>
               <p className="mt-4 text-sm text-muted">{live ? p.nowNote : p.laterNote}</p>
-              <a href={mailto(brand(t.cta.mailSubject))} className={`${button.primary} mt-8`}>
-                {t.cta.pilot}
+              <a
+                href={live ? mailto(brand(t.cta.mailSubject), t.cta.mailBody) : mailto(brand(t.cta.earlySubject).replace("{agent}", agent.name), t.cta.earlyBody)}
+                className={`${button.primary} mt-8`}
+              >
+                {live ? t.cta.pilot : t.cta.earlyAccess}
                 <CtaArrow />
               </a>
             </div>
@@ -73,8 +76,8 @@ export default async function AgentPage({ params }: PageProps<"/[lang]/agents/[s
 
         {live && (
           <div className={`${container} enter enter-3 mt-16`}>
-            <div className="reveal-tilt origin-top rounded-[2.25rem] bg-night p-2 shadow-soft sm:p-3 md:p-6 lg:p-10">
-              <div className="rounded-[1.75rem] bg-white/5 p-1.5 ring-1 ring-night-line">
+            <div className="reveal-tilt origin-top rounded-frame bg-night p-2 shadow-soft sm:p-3 md:p-6 lg:p-10">
+              <div className="rounded-shell bg-white/5 p-1.5 ring-1 ring-night-line">
                 <AppWindow t={t} />
               </div>
             </div>
@@ -110,7 +113,7 @@ export default async function AgentPage({ params }: PageProps<"/[lang]/agents/[s
         </section>
 
         <Others lang={lang} t={t} others={others} />
-        <Contact t={t} />
+        <Contact lang={lang} t={t} agent={live ? undefined : agent.name} />
       </main>
       <Footer lang={lang} t={t} />
     </>
@@ -127,7 +130,7 @@ function Others({ lang, t, others }: { lang: Locale; t: Dictionary; others: Dict
             <li key={a.slug} className="reveal">
               <Link href={`/${lang}/agents/${a.slug}`} className="group flex h-full flex-col rounded-core bg-bg p-5 ring-1 ring-line transition-transform duration-500 ease-premium hover:-translate-y-1">
                 <span className="flex items-start justify-between">
-                  <span className="flex size-10 items-center justify-center rounded-xl bg-panel">
+                  <span className="flex size-10 items-center justify-center rounded-ui bg-panel">
                     <AgentIcon slug={a.slug} size={20} />
                   </span>
                   <ArrowUpRight size={18} weight="light" aria-hidden="true" className="text-muted transition-transform duration-300 ease-premium group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" />

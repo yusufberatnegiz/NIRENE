@@ -23,6 +23,8 @@
   --night-2: #172036;
   --night-line: rgb(255 255 255 / 0.1);
   --night-muted: #a7b0c2;
+  --focus: #9a5b06;
+  --elev: 0 1px 2px rgb(14 21 37 / 0.04), 0 24px 64px -24px rgb(14 21 37 / 0.18);
 }
 
 /* Dark tokens: explicit choice via data-theme, otherwise the system preference. */
@@ -40,10 +42,12 @@
   --accent-ink: #0e1525;
   --accent-text: #f4b453;
   --accent-tint: #1f1a10;
-  --night: #0c0c0d;
-  --night-2: #161618;
+  --night: #222226;
+  --night-2: #2a2a2f;
+  --elev: 0 1px 0 rgb(255 255 255 / 0.04), 0 24px 64px -24px rgb(0 0 0 / 0.9);
   --night-line: rgb(255 255 255 / 0.1);
   --night-muted: #a1a1a8;
+  --focus: #f4b453;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,10 +65,12 @@
     --accent-ink: #0e1525;
     --accent-text: #f4b453;
     --accent-tint: #1f1a10;
-    --night: #0c0c0d;
-    --night-2: #161618;
+    --night: #222226;
+    --night-2: #2a2a2f;
+    --elev: 0 1px 0 rgb(255 255 255 / 0.04), 0 24px 64px -24px rgb(0 0 0 / 0.9);
     --night-line: rgb(255 255 255 / 0.1);
     --night-muted: #a1a1a8;
+    --focus: #f4b453;
   }
 }
 
@@ -103,11 +109,12 @@
   --color-night-muted: var(--night-muted);
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
+  --radius-frame: 2.25rem;
   --radius-shell: 1.75rem;
   --radius-core: 1.375rem;
   --radius-ui: 0.75rem;
   --ease-premium: cubic-bezier(0.32, 0.72, 0, 1);
-  --shadow-soft: 0 1px 2px rgb(14 21 37 / 0.04), 0 24px 64px -24px rgb(14 21 37 / 0.18);
+  --shadow-soft: var(--elev);
 }
 
 html {
@@ -137,7 +144,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
 
@@ -164,10 +171,10 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .enter { animation: rise 0.9s cubic-bezier(0.32, 0.72, 0, 1) both; }
-  .enter-2 { animation-delay: 0.12s; }
-  .enter-3 { animation-delay: 0.24s; }
-  .float { animation: float 6s ease-in-out infinite; }
+  .enter { animation: rise 0.6s cubic-bezier(0.32, 0.72, 0, 1) both; }
+  .enter-2 { animation-delay: 0.08s; }
+  .enter-3 { animation-delay: 0.16s; }
+  .float { animation: float 2.4s ease-in-out 2; } /* finite: under 5s (WCAG 2.2.2) */
   .float-late { animation-delay: -3s; }
 
   @supports (animation-timeline: view()) {

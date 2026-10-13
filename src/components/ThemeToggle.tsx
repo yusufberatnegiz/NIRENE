@@ -16,7 +16,7 @@ export function ThemeToggle({ toLight, toDark }: { toLight: string; toDark: stri
 
   // Both icons render; CSS shows the one for the current theme, so server and client markup match.
   return (
-    <button type="button" onClick={toggle} className="group flex size-10 items-center justify-center rounded-full transition-colors hover:bg-shell">
+    <button type="button" onClick={toggle} className="group flex size-10 items-center justify-center rounded-full transition-colors hover:bg-shell active:bg-panel">
       <span className="dark:hidden">
         <Moon size={20} weight="light" aria-hidden="true" />
         <span className="sr-only">{toDark}</span>

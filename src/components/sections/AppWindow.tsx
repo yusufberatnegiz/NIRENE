@@ -9,9 +9,9 @@ export function AppWindow({ t }: { t: Dictionary }) {
   const icons = [House, ChatCircleText, ListChecks, Flag];
 
   return (
-    <figure aria-label={a.label} className="overflow-hidden rounded-core bg-surface text-ink">
+    <figure className="overflow-hidden rounded-core bg-surface text-ink">
       <div className="grid md:grid-cols-[13rem_1fr] lg:grid-cols-[13rem_1fr_17rem]">
-        <aside className="hidden border-r border-line p-4 md:block">
+        <div className="hidden border-r border-line p-4 md:block">
           <div className="scale-90 origin-left">
             <Logo />
           </div>
@@ -27,7 +27,7 @@ export function AppWindow({ t }: { t: Dictionary }) {
               );
             })}
           </ul>
-        </aside>
+        </div>
 
         <div className="flex flex-col gap-4 p-4 sm:p-6">
           <div>
@@ -54,13 +54,13 @@ export function AppWindow({ t }: { t: Dictionary }) {
               {a.escalated}
             </p>
           </div>
-          <div className="mt-auto flex items-center justify-between rounded-full px-4 py-2.5 text-sm text-muted ring-1 ring-line">
+          <div aria-hidden="true" className="mt-auto flex items-center justify-between rounded-full px-4 py-2.5 text-sm text-muted ring-1 ring-line">
             {a.input}
             <PaperPlaneRight size={18} weight="light" aria-hidden="true" />
           </div>
         </div>
 
-        <aside className="hidden border-l border-line p-6 lg:block">
+        <div className="hidden border-l border-line p-6 lg:block">
           <p className="text-sm font-semibold">{a.journey}</p>
           <p className="mt-4 font-display text-3xl font-semibold tracking-tight">{a.week}</p>
           <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-panel">
@@ -76,7 +76,7 @@ export function AppWindow({ t }: { t: Dictionary }) {
               </li>
             ))}
           </ul>
-        </aside>
+        </div>
       </div>
       <figcaption className="border-t border-line px-6 py-3 text-xs text-muted">{p.sample}</figcaption>
     </figure>

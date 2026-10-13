@@ -4,8 +4,8 @@ import { site } from "@/config/site";
 
 export const container = "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8";
 
-export const mailto = (subject: string) =>
-  `mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}`;
+export const mailto = (subject: string, body?: string) =>
+  `mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ""}`;
 
 const pill =
   "group inline-flex items-center gap-3 whitespace-nowrap rounded-full text-sm font-semibold transition-[background-color,box-shadow,transform] duration-300 ease-premium active:scale-[0.98]";
@@ -29,7 +29,7 @@ export function CtaArrow() {
 export function Shell({ children, className = "", core = "bg-surface" }: { children: ReactNode; className?: string; core?: string }) {
   return (
     <div className={`rounded-shell bg-shell p-1.5 ring-1 ring-line ${className}`}>
-      <div className={`h-full rounded-core shadow-[inset_0_1px_0_rgb(255_255_255/0.6)] ${core}`}>{children}</div>
+      <div className={`h-full rounded-core shadow-[inset_0_1px_0_rgb(255_255_255/0.6)] dark:shadow-[inset_0_1px_0_rgb(255_255_255/0.06)] ${core}`}>{children}</div>
     </div>
   );
 }

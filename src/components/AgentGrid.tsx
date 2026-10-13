@@ -33,7 +33,7 @@ export function AgentGrid({ lang, t }: { lang: Locale; t: Dictionary }) {
           className="reveal group flex flex-col rounded-core p-5 ring-1 ring-line transition-[background-color,transform] duration-500 ease-premium hover:-translate-y-1 hover:bg-surface"
         >
           <span className="flex items-start justify-between gap-4">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-panel">
+            <span className="flex size-10 items-center justify-center rounded-ui bg-panel">
               <AgentIcon slug={a.slug} size={20} />
             </span>
             <ArrowUpRight size={18} weight="light" aria-hidden="true" className="text-muted transition-transform duration-300 ease-premium group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" />

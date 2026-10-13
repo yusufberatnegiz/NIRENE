@@ -15,13 +15,14 @@ export const site = {
     { name: "DESIRD", focus: { tr: "Role göre kişiselleştirme", en: "Role-based personalisation" } },
   ] satisfies { name: string; focus: L }[],
 
-  // Downloaded from each organisation's own website. DOKA logo not found yet: rendered as a wordmark.
+  // Downloaded from each organisation's own website.
   logos: [
-    { name: "AGT", src: "/logos/agt.svg", w: 100, h: 26 },
-    { name: "DOKA", src: null, w: 0, h: 0 },
-    { name: "DESIRD", src: "/logos/desird.png", w: 195, h: 66 },
-    { name: "Antalya OSB Teknopark", src: "/logos/aosb-teknopark.png", w: 400, h: 143 },
-    { name: "Antalya Bilim Üniversitesi", src: "/logos/abu.png", w: 800, h: 800 },
+    // group: index into the dictionary's logoGroups (0 pilot partners, 1 collaborators).
+    { name: "AGT", src: "/logos/agt.svg", w: 100, h: 26, group: 0 },
+    { name: "DOKA", src: "/logos/doka.png", w: 700, h: 340, group: 0 },
+    { name: "DESIRD", src: "/logos/desird.png", w: 195, h: 66, group: 0 },
+    { name: "Antalya OSB Teknopark", src: "/logos/aosb-teknopark.png", w: 400, h: 143, group: 1 },
+    { name: "Antalya Bilim Üniversitesi", src: "/logos/abu.png", w: 800, h: 800, group: 1 },
   ],
 
   team: [

@@ -11,7 +11,7 @@ export default async function Login({ params }: PageProps<"/[lang]/login">) {
   return (
     <Notice lang={lang} t={t} path="/login" title={t.login.title} back={t.login.back}>
       <p>{brand(t.login.body)}</p>
-      <a href={mailto(brand(t.cta.mailSubject))} className={`${button.primary} justify-self-start`}>
+      <a href={mailto(brand(t.cta.mailSubject), t.cta.mailBody)} className={`${button.primary} justify-self-start`}>
         {t.cta.pilot}
         <CtaArrow />
       </a>
