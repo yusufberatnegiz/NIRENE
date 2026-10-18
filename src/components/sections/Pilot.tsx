@@ -3,11 +3,9 @@ import factory from "@/assets/photos/factory.jpg";
 import { site } from "@/config/site";
 import type { Dictionary, Locale } from "@/i18n";
 import { container, SectionTitle, Shell } from "../ui";
+import { logoHeight } from "./Logos";
 
 const logo = (name: string) => site.logos.find((l) => l.name === name && l.src);
-// Same visual area for every mark: wide logos get shorter, compact ones taller (3600px² ≈ 120x30 for AGT).
-// `scale` is an optical correction for light lowercase wordmarks that read smaller at equal area.
-const logoHeight = (l: { w: number; h: number; scale?: number }) => Math.round(Math.sqrt(3600 / (l.w / l.h)) * (l.scale ?? 1));
 
 export function Pilot({ lang, t }: { lang: Locale; t: Dictionary }) {
   return (
@@ -23,7 +21,7 @@ export function Pilot({ lang, t }: { lang: Locale; t: Dictionary }) {
           <ul className="grid gap-3 sm:grid-cols-3 lg:col-span-7">
             {site.partners.map((p) => (
               <li key={p.name} className="reveal rounded-core bg-panel p-6">
-                <div className="flex h-12 items-center">
+                <div className="flex h-12 items-end">
                   {logo(p.name) ? (
                     <Image src={logo(p.name)!.src!} alt={p.name} width={logo(p.name)!.w} height={logo(p.name)!.h} style={{ height: logoHeight(logo(p.name)!) }} className="w-auto object-contain dark:brightness-0 dark:invert" />
                   ) : (

@@ -2,6 +2,10 @@ import Image from "next/image";
 import { site } from "@/config/site";
 import { container } from "../ui";
 
+// Same visual area for every mark: wide logos get shorter, compact ones taller (3600px² ≈ 120x30 for AGT).
+// `scale` is an optical correction for light lowercase wordmarks that read smaller at equal area.
+export const logoHeight = (l: { w: number; h: number; scale?: number }) => Math.round(Math.sqrt(3600 / (l.w / l.h)) * (l.scale ?? 1));
+
 // Light theme: white tiles, grayscale logos. Dark theme: dark tiles, logos inverted to light.
 // On hover both themes show the original colors on a white tile.
 // The square seal (ABÜ) is only inverted so its inner details survive; the rest become white silhouettes.
@@ -23,7 +27,8 @@ export function Logos({ label, groups }: { label: string; groups: string[] }) {
                     alt={l.name}
                     width={l.w}
                     height={l.h}
-                    className={`${l.w === l.h ? "max-h-12 sm:max-h-16 dark:invert" : "max-h-10 sm:max-h-12 dark:brightness-0 dark:invert"} w-auto object-contain opacity-70 grayscale transition duration-500 ease-premium group-hover:opacity-100 group-hover:grayscale-0 dark:opacity-80 dark:group-hover:opacity-100 dark:group-hover:brightness-100 dark:group-hover:invert-0`}
+                    style={{ height: logoHeight(l) }}
+                    className={`${l.w === l.h ? "dark:invert" : "dark:brightness-0 dark:invert"} w-auto object-contain opacity-70 grayscale transition duration-500 ease-premium group-hover:opacity-100 group-hover:grayscale-0 dark:opacity-80 dark:group-hover:opacity-100 dark:group-hover:brightness-100 dark:group-hover:invert-0`}
                   />
                 </li>
               ))}
