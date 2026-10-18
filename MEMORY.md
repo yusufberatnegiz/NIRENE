@@ -6,7 +6,7 @@ Update after major decisions, completed phases, or bugs future agents need to kn
 
 - Current task: Phase 1 product page.
 - Current phase: Product page v1 built (TR/EN, light/dark). Design council (visual, a11y, content, responsive, B2B) reached 9+/10 in all five areas on 2026-10-13 after 5 rounds.
-- Next step: advisor review of copy/naming/pricing; supply pending externals (real email, quotes, team photos, setup time/HR hours, reply-time promise, legal docs, hosting).
+- Next step: advisor review of copy/naming/pricing; supply pending externals (quotes, team photos, setup time/HR hours, reply-time promise, legal docs, hosting).
 - Blocked by: none (contact email can be a placeholder until provided).
 
 ## Decisions
@@ -24,13 +24,15 @@ Update after major decisions, completed phases, or bugs future agents need to kn
 - 2026-10-12 Each nav item is its own page: /platform, /agents (+ /agents/[slug]), /principles, /pricing, /team via `PageShell` in src/components/Page.tsx. Home = Hero, Problem, Ecosystem, Pilot, Contact. Agents nav item has a CSS-only dropdown (hover + keyboard focus-visible).
 - 2026-10-12 Theme toggle: system preference by default; explicit choice stored in localStorage `theme` and applied as `<html data-theme>` by an inline head script (src/components/themeScript.ts, must stay outside the "use client" module). Tailwind `dark:` uses a custom variant matching the same rule. Logos: dark tiles + inverted logos in dark; white tile + original colors on hover in both themes.
 - 2026-10-12 Contact email: placeholder in `src/config/site.ts` until provided.
-- 2026-10-12 Working naming: NOOVOY AI product, NİRENE project/ecosystem, INNOSU R&D company. Configurable in one file.
+- 2026-10-12 Naming (2026-10-18, per Ülgen doc): NOOVOY AI = product and ecosystem, NERINE = R&D project and onboarding agent (earlier "NİRENE" was a misspelling), INNOSU R&D = company. Configurable in one file.
 - 2026-10-12 Premium redesign after user feedback ("looks bad"). References studied: Leapsome, Lattice, Rippling, Moveworks (patterns only, nothing copied). Palette: midnight ink #0e1525 + saffron #f2a93b, cool neutrals. Fonts: Schibsted Grotesk (display) + Geist (body). Shape: shells 28px / cores 22px / UI 12px / pills. Hero shows a real-component app window from the team's AI Chat wireframe.
 
 - 2026-10-13 Status labels: "Pilot programında" (Onboarding) / "Erken erişim" (others). Hero keeps whole-product framing (owner decision), phrased as "designed"; no "today we start with onboarding" line.
 - 2026-10-13 Security copy uses design tense ("tasarlanır") for encryption, pseudonymisation and no-model-training: unverified, owner must confirm before launch.
 
 - 2026-10-13 Hosting: Vercel, live at https://nirene.vercel.app (GitHub main auto-deploys). Live smoke tests 92/92, headers and HTTPS redirect verified.
+
+- 2026-10-18 Agent names from "NOOVOY AI — Agent Ailesi ve Veri İletişimi" (Ülgen): dictionary field `code` (NERINE, HERON, TOYGAR/LARK, LOTUS, ORKİDE/ORCHID, IRIS, ASTER, DEFNE/LAUREL) shown above the role name. TR copy uses "ajan" (not "asistan"). Managers/HR see only aggregated data for groups of 7+ (no individual progress). Contact email sulgen@antalya.edu.tr. Handbook writing offered as a paid service.
 
 ## Known Issues
 

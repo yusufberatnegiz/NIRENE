@@ -81,8 +81,8 @@ test("new page opens at the top after navigating from the bottom", async ({ page
 test("agents dropdown opens on hover and links to agent pages", async ({ page, isMobile }) => {
   test.skip(isMobile, "desktop nav");
   await page.goto("/tr");
-  await page.getByRole("navigation", { name: "Ana menü" }).getByRole("link", { name: "Asistanlar" }).hover();
-  const item = page.getByRole("link", { name: /Kültür Asistanı/ }).first();
+  await page.getByRole("navigation", { name: "Ana menü" }).getByRole("link", { name: "Ajanlar" }).hover();
+  const item = page.getByRole("link", { name: /LOTUS/ }).first();
   await expect(item).toBeVisible();
   await item.click();
   await expect(page).toHaveURL(/\/tr\/agents\/culture$/);
@@ -94,7 +94,7 @@ test("mobile menu opens, lists sections and closes on Escape", async ({ page, is
   const toggle = page.getByRole("button", { name: "Menü" });
   await toggle.click();
   await expect(toggle).toHaveAttribute("aria-expanded", "true");
-  for (const name of ["Platform", "Asistanlar", "İlkeler", "Fiyatlar", "Ekip", "Giriş yap", "Pilot için başvurun"]) {
+  for (const name of ["Platform", "Ajanlar", "İlkeler", "Fiyatlar", "Ekip", "Giriş yap", "Pilot için başvurun"]) {
     await expect(page.locator("#mobile-menu").getByRole("link", { name })).toBeVisible();
   }
   await page.keyboard.press("Escape");
@@ -136,13 +136,13 @@ test("planned agents offer early access, not a pilot", async ({ page }) => {
   await page.goto("/tr/agents/crisis");
   const cta = page.getByRole("link", { name: /Erken erişim listesine katılın/ }).first();
   await expect(cta).toBeVisible();
-  expect(await cta.getAttribute("href")).toContain(encodeURIComponent("Kriz Asistanı"));
+  expect(await cta.getAttribute("href")).toContain(encodeURIComponent("ASTER (Kriz Ajanı)"));
 });
 
 test("agents dropdown closes on Escape and opens from the caret button", async ({ page, isMobile }) => {
   test.skip(isMobile, "desktop nav");
   await page.goto("/tr");
-  const caret = page.getByRole("button", { name: "Asistan listesini aç" });
+  const caret = page.getByRole("button", { name: "Ajan listesini aç" });
   await caret.focus();
   await page.keyboard.press("Enter");
   await expect(caret).toHaveAttribute("aria-expanded", "true");

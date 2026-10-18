@@ -5,6 +5,9 @@ import type { Dictionary, Locale } from "@/i18n";
 import { container, SectionTitle, Shell } from "../ui";
 
 const logo = (name: string) => site.logos.find((l) => l.name === name && l.src);
+// Same visual area for every mark: wide logos get shorter, compact ones taller (3600px² ≈ 120x30 for AGT).
+// `scale` is an optical correction for light lowercase wordmarks that read smaller at equal area.
+const logoHeight = (l: { w: number; h: number; scale?: number }) => Math.round(Math.sqrt(3600 / (l.w / l.h)) * (l.scale ?? 1));
 
 export function Pilot({ lang, t }: { lang: Locale; t: Dictionary }) {
   return (
@@ -20,12 +23,14 @@ export function Pilot({ lang, t }: { lang: Locale; t: Dictionary }) {
           <ul className="grid gap-3 sm:grid-cols-3 lg:col-span-7">
             {site.partners.map((p) => (
               <li key={p.name} className="reveal rounded-core bg-panel p-6">
-                {logo(p.name) ? (
-                  <Image src={logo(p.name)!.src!} alt={p.name} width={logo(p.name)!.w} height={logo(p.name)!.h} className="h-8 w-auto object-contain object-left dark:brightness-0 dark:invert" />
-                ) : (
-                  <p className="font-display text-2xl font-semibold leading-8 tracking-tight">{p.name}</p>
-                )}
-                <p className="mt-1 text-sm leading-relaxed text-muted">{p.focus[lang]}</p>
+                <div className="flex h-12 items-center">
+                  {logo(p.name) ? (
+                    <Image src={logo(p.name)!.src!} alt={p.name} width={logo(p.name)!.w} height={logo(p.name)!.h} style={{ height: logoHeight(logo(p.name)!) }} className="w-auto object-contain dark:brightness-0 dark:invert" />
+                  ) : (
+                    <p className="font-display text-2xl font-semibold tracking-tight">{p.name}</p>
+                  )}
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{p.focus[lang]}</p>
               </li>
             ))}
           </ul>

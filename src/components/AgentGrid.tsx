@@ -17,7 +17,8 @@ export function AgentGrid({ lang, t }: { lang: Locale; t: Dictionary }) {
           <span className="inline-flex rounded-full bg-accent-ink/10 px-3 py-1 text-xs font-semibold">{t.agentsPage.now}</span>
           <AgentIcon slug={current.slug} size={28} />
         </span>
-        <span className="mt-16 block font-display text-4xl font-semibold tracking-[-0.03em] lg:mt-auto">{current.name}</span>
+        <span className="mt-16 block font-display text-4xl font-semibold tracking-[-0.03em] lg:mt-auto">{current.code}</span>
+        <span className="mt-1 block font-semibold">{current.name}</span>
         <span className="mt-3 block max-w-[40ch] leading-relaxed">{current.short}</span>
         <span className="mt-8 inline-flex items-center gap-3 self-start rounded-full bg-accent-ink py-2 pl-5 pr-2 text-sm font-semibold text-accent">
           {e.more}
@@ -38,7 +39,8 @@ export function AgentGrid({ lang, t }: { lang: Locale; t: Dictionary }) {
             </span>
             <ArrowUpRight size={18} weight="light" aria-hidden="true" className="text-muted transition-transform duration-300 ease-premium group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" />
           </span>
-          <span className="mt-5 block font-semibold">{a.name}</span>
+          <span className="mt-5 block font-display text-lg font-semibold">{a.code}</span>
+          <span className="block text-sm font-medium">{a.name}</span>
           <span className="mt-1 block text-sm leading-relaxed text-muted">{a.short}</span>
           <span className="mt-4 block text-xs text-muted">{t.agentsPage.later}</span>
         </Link>

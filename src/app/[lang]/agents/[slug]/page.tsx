@@ -27,7 +27,7 @@ async function load(params: PageProps<"/[lang]/agents/[slug]">["params"]) {
 export async function generateMetadata({ params }: PageProps<"/[lang]/agents/[slug]">): Promise<Metadata> {
   const { lang, agent } = await load(params);
   return {
-    title: `${agent.name} | ${brand("{product}")}`,
+    title: `${agent.code} · ${agent.name} | ${brand("{product}")}`,
     description: agent.tagline,
     alternates: { canonical: `/${lang}/agents/${agent.slug}`, languages: { tr: `/tr/agents/${agent.slug}`, en: `/en/agents/${agent.slug}` } },
   };
@@ -58,13 +58,16 @@ export default async function AgentPage({ params }: PageProps<"/[lang]/agents/[s
                   {live ? p.now : p.later}
                 </span>
               </div>
-              <h1 className="mt-8 font-display text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-balance sm:text-5xl md:text-6xl">{agent.name}</h1>
+              <h1 className="mt-8 font-display text-4xl font-semibold leading-[1.04] tracking-[-0.04em] text-balance sm:text-5xl md:text-6xl">
+                {agent.code}
+                <span className="mt-3 block text-2xl font-medium tracking-[-0.02em] text-muted md:text-3xl">{agent.name}</span>
+              </h1>
             </div>
             <div className="enter enter-2 lg:pb-2">
               <p className="text-lg leading-relaxed text-muted">{agent.tagline}</p>
               <p className="mt-4 text-sm text-muted">{live ? p.nowNote : p.laterNote}</p>
               <a
-                href={live ? mailto(brand(t.cta.mailSubject), t.cta.mailBody) : mailto(brand(t.cta.earlySubject).replace("{agent}", agent.name), t.cta.earlyBody)}
+                href={live ? mailto(brand(t.cta.mailSubject), t.cta.mailBody) : mailto(brand(t.cta.earlySubject).replace("{agent}", `${agent.code} (${agent.name})`), t.cta.earlyBody)}
                 className={`${button.primary} mt-8`}
               >
                 {live ? t.cta.pilot : t.cta.earlyAccess}
@@ -113,7 +116,7 @@ export default async function AgentPage({ params }: PageProps<"/[lang]/agents/[s
         </section>
 
         <Others lang={lang} t={t} others={others} />
-        <Contact lang={lang} t={t} agent={live ? undefined : agent.name} />
+        <Contact lang={lang} t={t} agent={live ? undefined : `${agent.code} (${agent.name})`} />
       </main>
       <Footer lang={lang} t={t} />
     </>
@@ -135,7 +138,8 @@ function Others({ lang, t, others }: { lang: Locale; t: Dictionary; others: Dict
                   </span>
                   <ArrowUpRight size={18} weight="light" aria-hidden="true" className="text-muted transition-transform duration-300 ease-premium group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" />
                 </span>
-                <span className="mt-5 font-semibold">{a.name}</span>
+                <span className="mt-5 font-display text-lg font-semibold">{a.code}</span>
+                <span className="text-sm font-medium">{a.name}</span>
                 <span className="mt-1 text-sm leading-relaxed text-muted">{a.short}</span>
               </Link>
             </li>

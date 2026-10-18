@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { CaretDown } from "@phosphor-icons/react";
 import { AgentIcon } from "./AgentIcon";
 
-type Item = { href: string; slug: string; name: string; status: string; live: boolean; current: boolean };
+type Item = { href: string; slug: string; code: string; name: string; status: string; live: boolean; current: boolean };
 
 // Disclosure: the label navigates to /agents, the caret button toggles the panel (keyboard), hover opens it (mouse).
 // Escape closes and returns focus to the caret; focus leaving the item closes it; a click on any link closes it.
@@ -67,7 +67,8 @@ export function AgentsDropdown(props: { href: string; label: string; toggleLabel
                   <AgentIcon slug={a.slug} size={18} />
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold">{a.name}</span>
+                  <span className="block text-sm font-semibold">{a.code}</span>
+                  <span className="block text-xs text-muted">{a.name}</span>
                   <span className="block text-xs text-muted">{a.status}</span>
                 </span>
               </Link>

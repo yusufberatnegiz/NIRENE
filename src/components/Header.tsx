@@ -26,6 +26,7 @@ export function Header({ lang, t, path = "" }: Props) {
   const agents = t.agents.map((a) => ({
     href: `${home}/agents/${a.slug}`,
     slug: a.slug,
+    code: a.code,
     name: a.name,
     live: a.status === "now",
     current: path === `/agents/${a.slug}`,

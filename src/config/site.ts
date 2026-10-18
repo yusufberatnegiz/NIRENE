@@ -3,10 +3,9 @@ type L = { tr: string; en: string };
 
 export const site = {
   product: "NOOVOY AI",
-  project: "NİRENE",
+  project: "NERINE",
   company: "INNOSU R&D",
-  // shortcut: placeholder address, replace with the real pilot inbox before launch.
-  contactEmail: "pilot@example.com",
+  contactEmail: "sulgen@antalya.edu.tr",
   url: "https://example.com",
 
   partners: [
@@ -19,8 +18,8 @@ export const site = {
   logos: [
     // group: index into the dictionary's logoGroups (0 pilot partners, 1 collaborators).
     { name: "AGT", src: "/logos/agt.svg", w: 100, h: 26, group: 0 },
-    { name: "DOKA", src: "/logos/doka.png", w: 700, h: 340, group: 0 },
-    { name: "DESIRD", src: "/logos/desird.png", w: 195, h: 66, group: 0 },
+    { name: "DOKA", src: "/logos/doka-mark.png", w: 700, h: 340, group: 0 },
+    { name: "DESIRD", src: "/logos/desird.png", w: 195, h: 66, group: 0, scale: 1.2 },
     { name: "Antalya OSB Teknopark", src: "/logos/aosb-teknopark.png", w: 400, h: 143, group: 1 },
     { name: "Antalya Bilim Üniversitesi", src: "/logos/abu.png", w: 800, h: 800, group: 1 },
   ],
