@@ -71,7 +71,7 @@
       "Make hiring, promotion, pay or disciplinary decisions",
       "Perform psychological assessments"
     ],
-    "compliance": "Designed in line with KVKK and GDPR principles, with the EU AI Act requirements in mind.",
+    "compliance": "Designed in line with KVKK (Turkish Personal Data Protection Law) and GDPR principles, with the EU AI Act requirements in mind.",
     "lead": "{product} agents inform and guide. They do not make decisions, monitor employees or score them."
   },
   "partners": {
@@ -591,7 +591,7 @@
         "body": "Every answer is logged with the sources it used. HR reviews answer quality and feedback without seeing employee identities."
       },
       {
-        "title": "KVKK and GDPR",
+        "title": "KVKK (Turkish Personal Data Protection Law) and GDPR",
         "body": "A data processing inventory and privacy notice are prepared with your company before the pilot. Pilot data is deleted within a period agreed in writing at the end of the pilot."
       }
     ],

@@ -3,9 +3,9 @@ import factory from "@/assets/photos/factory.jpg";
 import { site } from "@/config/site";
 import type { Dictionary, Locale } from "@/i18n";
 import { container, SectionTitle, Shell } from "../ui";
-import { logoHeight } from "./Logos";
+import { logoHeight, shownLogos } from "./Logos";
 
-const logo = (name: string) => site.logos.find((l) => l.name === name && l.src);
+const logo = (name: string) => shownLogos.find((l) => l.name === name && l.src);
 
 export function Pilot({ lang, t }: { lang: Locale; t: Dictionary }) {
   return (

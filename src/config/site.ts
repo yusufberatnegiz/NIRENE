@@ -14,6 +14,9 @@ export const site = {
     { name: "DESIRD", focus: { tr: "Role göre kişiselleştirme", en: "Role-based personalisation" } },
   ] satisfies { name: string; focus: L }[],
 
+  // Logos waiting for the partner's approval: files and entries stay, they are only hidden. Empty the list to show them again.
+  logosPendingApproval: ["AGT", "DOKA", "DESIRD"] as string[],
+
   // Downloaded from each organisation's own website.
   logos: [
     // group: index into the dictionary's logoGroups (0 pilot partners, 1 collaborators).
