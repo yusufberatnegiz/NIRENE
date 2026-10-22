@@ -601,7 +601,7 @@
   ],
   "cookie": {
     "title": "Çerez tercihleri",
-    "body": "Bu site yalnızca çalışması için gerekli olan zorunlu çerezleri kullanır. Analitik veya reklam çerezi kullanmıyoruz; ileride eklenirse yalnızca onayınızla çalışır.",
+    "body": "Bu site yalnızca çalışması için gerekli olan zorunlu çerezleri kullanır. Analitik veya reklam çerezi kullanmıyoruz.",
     "accept": "Tümünü kabul et",
     "reject": "Tümünü reddet",
     "prefs": "Tercihler",
@@ -609,7 +609,7 @@
     "necessary": "Zorunlu",
     "necessaryBody": "Tema tercihinizi ve çerez seçiminizi hatırlar. Her zaman açıktır.",
     "analytics": "Analitik",
-    "analyticsBody": "Siteyi nasıl kullandığınızı anlamamıza yardımcı olur. Şu anda kullanılmıyor.",
+    "analyticsBody": "Siteyi nasıl kullandığınızı anlamamıza yardımcı olur.",
     "settings": "Çerez tercihleri",
     "always": "Her zaman açık",
     "policy": "Gizlilik"

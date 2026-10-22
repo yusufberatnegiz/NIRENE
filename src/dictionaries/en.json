@@ -601,7 +601,7 @@
   ],
   "cookie": {
     "title": "Cookie preferences",
-    "body": "This site uses only the essential cookies it needs to work. We use no analytics or advertising cookies; if we add any, they will only run with your consent.",
+    "body": "This site uses only the essential cookies it needs to work. We use no analytics or advertising cookies.",
     "accept": "Accept all",
     "reject": "Reject all",
     "prefs": "Preferences",
@@ -609,7 +609,7 @@
     "necessary": "Essential",
     "necessaryBody": "Remembers your theme and cookie choice. Always on.",
     "analytics": "Analytics",
-    "analyticsBody": "Helps us understand how the site is used. Not in use today.",
+    "analyticsBody": "Helps us understand how the site is used.",
     "settings": "Cookie preferences",
     "always": "Always on",
     "policy": "Privacy"
