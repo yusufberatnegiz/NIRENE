@@ -153,19 +153,14 @@
     "body": "{product} şu anda pilot programındaki şirketlerin davet ettiği kullanıcılara açık. Hesabınız İK ekibiniz tarafından oluşturulur.",
     "back": "Ana sayfaya dön"
   },
-  "privacy": {
-    "title": "Gizlilik",
-    "body": "Bu site çerez kullanmaz ve ziyaretçilerden kişisel veri toplamaz. Pilot başvurusu için e-posta istemcinizden gönderdiğiniz bilgiler yalnızca başvurunuzu yanıtlamak için kullanılır.",
-    "back": "Ana sayfaya dön"
-  },
   "footer": {
     "product": "Ürün",
     "company": "Kurum",
     "security": "Güvenlik ve veri",
-    "privacy": "Gizlilik",
     "about": "{product}, {company} tarafından Antalya Bilim Üniversitesi iş birliğiyle geliştirilen, sekiz uzman yapay zekâ ajanından oluşan bir ekosistemdir.",
     "address": "AOSB Teknopark, Döşemealtı, Antalya",
-    "rights": "{company}"
+    "rights": "{company}",
+    "privacy": "Gizlilik"
   },
   "app": {
     "label": "Onboarding Ajanı uygulama önizlemesi",
@@ -603,5 +598,25 @@
   "logoGroups": [
     "Pilot ortakları",
     "İş birlikleri"
-  ]
+  ],
+  "cookie": {
+    "title": "Çerez tercihleri",
+    "body": "Bu site yalnızca çalışması için gerekli olan zorunlu çerezleri kullanır. Analitik veya reklam çerezi kullanmıyoruz; ileride eklenirse yalnızca onayınızla çalışır.",
+    "accept": "Tümünü kabul et",
+    "reject": "Tümünü reddet",
+    "prefs": "Tercihler",
+    "save": "Seçimi kaydet",
+    "necessary": "Zorunlu",
+    "necessaryBody": "Tema tercihinizi ve çerez seçiminizi hatırlar. Her zaman açıktır.",
+    "analytics": "Analitik",
+    "analyticsBody": "Siteyi nasıl kullandığınızı anlamamıza yardımcı olur. Şu anda kullanılmıyor.",
+    "settings": "Çerez tercihleri",
+    "always": "Her zaman açık",
+    "policy": "Gizlilik"
+  },
+  "privacy": {
+    "title": "Gizlilik",
+    "body": "Bu site yalnızca çalışması için gerekli zorunlu çerezleri kullanır ve ziyaretçilerden kişisel veri toplamaz. Pilot başvurusu için e-posta istemcinizden gönderdiğiniz bilgiler yalnızca başvurunuzu yanıtlamak için kullanılır.",
+    "back": "Ana sayfaya dön"
+  }
 }

@@ -34,6 +34,10 @@ Update after major decisions, completed phases, or bugs future agents need to kn
 
 - 2026-10-18 Agent names from "NOOVOY AI — Agent Ailesi ve Veri İletişimi" (Ülgen): dictionary field `code` (NERINE, HERON, TOYGAR/LARK, LOTUS, ORKİDE/ORCHID, IRIS, ASTER, DEFNE/LAUREL) shown above the role name. TR copy uses "ajan" (not "asistan"). Managers/HR see only aggregated data for groups of 7+ (no individual progress). Contact email sulgen@antalya.edu.tr. Handbook writing offered as a paid service.
 
+- 2026-10-21 Logo decision: concept C "growing dots" (employee figure + 8 agent dots growing clockwise), LogoMark in src/components/Logo.tsx; favicon src/app/icon.svg and src/app/apple-icon.png use the same geometry. Proposals in docs/logo-*.png (not committed). Before registering, run a TÜRKPATENT/EUIPO search; register the "NOOVOY" word mark first.
+
+- 2026-10-22 Cookie panel (src/components/CookieConsent.tsx): accept/reject/preferences, choice in localStorage `cookie-consent` for 12 months, footer "Çerez tercihleri" reopens it; `hasConsent("analytics")` gates any future non-essential script. Full legal pages (KVKK, cookies, terms, data request) were drafted then removed on request; hosting/transfer question (Vercel, KVKK m.9) still open.
+
 ## Known Issues
 
 - 2026-10-12 Lighthouse: desktop 100/100/100/100 on /tr, /tr/agents, /tr/agents/onboarding, /tr/pricing, /en; mobile perf 94-96, rest 100. Reveal animations must not leave text semi-transparent once in view (axe flags it): keep opacity in the first 40% of `rise` and no opacity in `tilt-in`.

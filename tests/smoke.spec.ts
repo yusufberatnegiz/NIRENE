@@ -4,6 +4,12 @@ import tr from "../src/dictionaries/tr.json";
 const pages = ["", "/platform", "/agents", "/principles", "/pricing", "/team", "/security", "/login", "/privacy"];
 const agentSlugs = tr.agents.map((a) => a.slug);
 
+// Most tests are about the page itself: start with a stored cookie choice so the panel stays closed.
+const consent = JSON.stringify({ v: 1, analytics: false, at: new Date().toISOString() });
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript((c) => localStorage.setItem("cookie-consent", c), consent);
+});
+
 test("root redirects to Turkish, English Accept-Language to /en", async ({ page, browser }) => {
   await page.goto("/");
   await expect(page).toHaveURL(/\/tr$/);
@@ -150,4 +156,33 @@ test("agents dropdown closes on Escape and opens from the caret button", async (
   await page.keyboard.press("Escape");
   await expect(caret).toHaveAttribute("aria-expanded", "false");
   await expect(caret).toBeFocused();
+});
+
+test.describe("cookie consent", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => localStorage.removeItem("cookie-consent"));
+  });
+
+  test("panel asks once, reject is as easy as accept, choice persists", async ({ page }) => {
+    await page.goto("/tr");
+    const panel = page.getByRole("region", { name: "Çerez tercihleri" });
+    await expect(panel).toBeVisible();
+    await expect(panel.getByRole("button", { name: "Tümünü reddet" })).toBeVisible();
+    await panel.getByRole("button", { name: "Tümünü reddet" }).click();
+    await expect(panel).toBeHidden();
+    const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("cookie-consent") ?? "null"));
+    expect(stored).toMatchObject({ v: 1, analytics: false });
+  });
+
+  test("footer link reopens preferences and saves a changed choice", async ({ page }) => {
+    await page.goto("/en");
+    await page.getByRole("region", { name: "Cookie preferences" }).getByRole("button", { name: "Accept all" }).click();
+    await page.locator("footer").getByRole("button", { name: "Cookie preferences" }).click();
+    const panel = page.getByRole("region", { name: "Cookie preferences" });
+    await expect(panel.getByRole("checkbox")).toBeChecked();
+    await panel.getByRole("checkbox").uncheck();
+    await panel.getByRole("button", { name: "Save choices" }).click();
+    const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("cookie-consent") ?? "null"));
+    expect(stored.analytics).toBe(false);
+  });
 });

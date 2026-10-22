@@ -3,6 +3,7 @@ import { site } from "@/config/site";
 import type { Dictionary, Locale } from "@/i18n";
 import { brand } from "@/i18n";
 import { Logo } from "./Logo";
+import { CookieSettingsButton } from "./CookieConsent";
 import { container } from "./ui";
 
 export function Footer({ lang, t }: { lang: Locale; t: Dictionary }) {
@@ -51,6 +52,11 @@ export function Footer({ lang, t }: { lang: Locale; t: Dictionary }) {
                   </Link>
                 </li>
               ))}
+              {g.title === t.footer.company && (
+                <li>
+                  <CookieSettingsButton label={t.cookie.settings} />
+                </li>
+              )}
             </ul>
           </nav>
         ))}

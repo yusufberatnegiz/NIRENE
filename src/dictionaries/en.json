@@ -153,19 +153,14 @@
     "body": "{product} is currently open to users invited by companies in the pilot programme. Your HR team creates your account.",
     "back": "Back to home"
   },
-  "privacy": {
-    "title": "Privacy",
-    "body": "This site uses no cookies and collects no personal data from visitors. Details you send from your email client for a pilot request are used only to answer that request.",
-    "back": "Back to home"
-  },
   "footer": {
     "product": "Product",
     "company": "Company",
     "security": "Security & data",
-    "privacy": "Privacy",
     "about": "{product} is an ecosystem of eight specialist AI agents, developed by {company} in collaboration with Antalya Bilim University.",
     "address": "AOSB Technopark, Döşemealtı, Antalya",
-    "rights": "{company}"
+    "rights": "{company}",
+    "privacy": "Privacy"
   },
   "app": {
     "label": "Onboarding Agent app preview",
@@ -603,5 +598,25 @@
   "logoGroups": [
     "Pilot partners",
     "Collaborators"
-  ]
+  ],
+  "cookie": {
+    "title": "Cookie preferences",
+    "body": "This site uses only the essential cookies it needs to work. We use no analytics or advertising cookies; if we add any, they will only run with your consent.",
+    "accept": "Accept all",
+    "reject": "Reject all",
+    "prefs": "Preferences",
+    "save": "Save choices",
+    "necessary": "Essential",
+    "necessaryBody": "Remembers your theme and cookie choice. Always on.",
+    "analytics": "Analytics",
+    "analyticsBody": "Helps us understand how the site is used. Not in use today.",
+    "settings": "Cookie preferences",
+    "always": "Always on",
+    "policy": "Privacy"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "body": "This site uses only the essential cookies it needs to work and collects no personal data from visitors. Details you send from your email client for a pilot request are used only to answer that request.",
+    "back": "Back to home"
+  }
 }
