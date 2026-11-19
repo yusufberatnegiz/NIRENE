@@ -40,7 +40,7 @@ Companion to `docs/PRD-NOOVOY-MVP.md`. Phase 1 is a static, bilingual marketing 
 4. Sections in PRD order; header with language switcher and Sign in; footer.
 5. Login placeholder and privacy pages.
 6. Security headers, metadata, OG images, sitemap, robots, `hreflang`.
-7. Playwright smoke tests for the PRD acceptance steps; Lighthouse pass; 360px and keyboard checks.
+7. Smoke checks for the PRD acceptance steps with curl and the in-app browser (Playwright removed 2026-11-19); 360px and keyboard checks.
 
 ## Commands
 
@@ -51,11 +51,11 @@ Created by the scaffold; not yet run.
 - Lint: `npm run lint`
 - Typecheck: `npx tsc --noEmit`
 - Build: `npm run build`
-- Test: `npx playwright test`
+- Test: see agent_docs/testing.md (curl + in-app browser)
 
 ## Verification
 
-PRD acceptance steps through Playwright (locale redirect, switcher, mailto href, login page has no inputs, labels on metrics and pricing, headers present) plus manual Lighthouse and visual checks in light/dark at 360px and desktop. **Nothing is verified yet.**
+PRD acceptance steps checked with curl and the in-app browser (locale redirect, switcher, mailto href, login page has no inputs, labels on metrics and pricing, headers present) plus manual Lighthouse and visual checks in light/dark at 360px and desktop. **Nothing is verified yet.**
 
 ## Handoff Context
 
@@ -88,8 +88,7 @@ PRD acceptance steps through Playwright (locale redirect, switcher, mailto href,
     "dev": "npm run dev",
     "lint": "npm run lint",
     "typecheck": "npx tsc --noEmit",
-    "build": "npm run build",
-    "test": "npx playwright test"
+    "build": "npm run build"
   }
 }
 ```

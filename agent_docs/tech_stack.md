@@ -22,7 +22,6 @@ Last verified: 2026-10-12 (build, lint, typecheck, browser)
 - Lint: `npm run lint`
 - Build: `npm run build`
 - Test: `npm test`
-- Lighthouse: `npm run lighthouse` (server running)
 - Browser check: `npm run dev`, then `/tr` and `/en` at 360px and desktop, light and dark
 
 ## Important Patterns

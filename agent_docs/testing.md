@@ -3,15 +3,13 @@
 ## Required Before Completion
 
 - [ ] Lint, typecheck and build pass.
-- [ ] Playwright smoke tests pass.
+- [ ] Smoke checks below done with `curl` and the in-app browser (no Playwright in this project).
 - [ ] User-visible changes checked in a browser (TR/EN, 360px/desktop, light/dark).
 - [ ] No tests skipped or weakened without approval.
 
 ## Commands
 
-- All tests: `npm test` (Playwright, desktop + Pixel 7; run `npm run build` first, reuses a server on :3000)
-- Lighthouse: `npm run start` then `npm run lighthouse` (uses Playwright Chromium; prints perf/a11y/best-practices/SEO per page)
-- Single test: `npx playwright test -g "<name>"`
+- Routes and headers: `curl -s -o /dev/null -w "%{http_code}"` and `curl -sI` against `npm run start` or the live URL
 - Typecheck: `npx tsc --noEmit`
 - Lint: `npm run lint`
 - Build: `npm run build`
@@ -22,8 +20,8 @@
 |-------------|---------------|
 | Copy / translations | Both locales render the key; no missing-message warnings in dev |
 | Section UI | Browser check at 360px and desktop, both themes |
-| Routing / middleware | Playwright: `/` → `/tr`, switcher keeps the section |
-| Headers / config | Playwright or `curl -I` against `npm run start` |
+| Routing / middleware | `curl`: `/` → `/tr`; browser: switcher keeps the section |
+| Headers / config | `curl -I` against `npm run start` |
 | Phase 2 auth | Human review plus focused tests, logged-out access to protected routes |
 
 ## Smoke tests (from PRD acceptance steps)

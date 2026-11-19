@@ -31,7 +31,7 @@ Keep secrets, credentials, private logs and production data out of commits. Part
 
 ## Done means
 
-Requested behaviour complete in both locales, lint/typecheck/build pass, relevant Playwright checks pass, and UI changes were looked at in a browser at 360px and desktop in light and dark. Report what was actually checked.
+Requested behaviour complete in both locales, lint/typecheck/build pass, smoke checks in agent_docs/testing.md done, and UI changes were looked at in a browser at 360px and desktop in light and dark. Report what was actually checked.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

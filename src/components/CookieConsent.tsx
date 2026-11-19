@@ -38,10 +38,10 @@ export function CookieConsent({ t, policyHref }: { t: Dictionary["cookie"]; poli
       setOpen(true);
     };
     // localStorage only exists in the browser, so the first check runs after hydration.
-    const first = requestAnimationFrame(() => !readChoice() && setOpen(true));
+    const first = setTimeout(() => !readChoice() && setOpen(true));
     window.addEventListener(OPEN_EVENT, reopen);
     return () => {
-      cancelAnimationFrame(first);
+      clearTimeout(first);
       window.removeEventListener(OPEN_EVENT, reopen);
     };
   }, []);
